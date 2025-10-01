@@ -53,7 +53,7 @@ const About = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      <main className="pt-20">
+      <main>
         {/* Hero Section */}
         <section className="relative py-20 bg-gradient-hero">
           <div className="absolute inset-0 opacity-10">

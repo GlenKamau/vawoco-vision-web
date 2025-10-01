@@ -11,7 +11,7 @@ const Blog = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      <main className="pt-20">
+      <main>
         {/* Hero Section */}
         <section className="py-20 bg-gradient-hero">
           <div className="container mx-auto px-4">
