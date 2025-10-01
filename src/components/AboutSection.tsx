@@ -1,4 +1,4 @@
-import { Target, Heart, Users, Award } from "lucide-react";
+import { Target, Heart, Users, Award, Sparkles } from "lucide-react";
 
 const AboutSection = () => {
   const values = [
@@ -25,9 +25,16 @@ const AboutSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-subtle">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-gradient-subtle relative overflow-hidden">
+      {/* Background Animated Elements */}
+      <div className="absolute top-10 right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float"></div>
+      <div className="absolute bottom-10 left-10 w-48 h-48 bg-secondary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "1.5s" }}></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16">
+          <div className="inline-block p-3 bg-primary/10 rounded-2xl mb-4 animate-float">
+            <Sparkles className="w-8 h-8 text-primary" />
+          </div>
           <h2 className="font-display font-bold text-4xl md:text-5xl mb-6 animate-fade-in">
             Who We Are
           </h2>
@@ -44,13 +51,13 @@ const AboutSection = () => {
             return (
               <div
                 key={index}
-                className="bg-card rounded-2xl p-6 shadow-card hover:shadow-hover transition-smooth animate-scale-in text-center"
+                className="bg-card rounded-2xl p-6 shadow-card hover:shadow-hover transition-smooth animate-scale-in text-center group hover:scale-105 cursor-pointer"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="w-16 h-16 mx-auto mb-4 gradient-hero rounded-2xl flex items-center justify-center">
+                <div className="w-16 h-16 mx-auto mb-4 gradient-hero rounded-2xl flex items-center justify-center group-hover:shadow-glow transition-smooth group-hover:animate-float">
                   <Icon className="w-8 h-8 text-primary-foreground" />
                 </div>
-                <h3 className="font-display font-semibold text-xl mb-2">
+                <h3 className="font-display font-semibold text-xl mb-2 group-hover:text-primary transition-smooth">
                   {value.title}
                 </h3>
                 <p className="text-sm text-muted-foreground">

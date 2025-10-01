@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Header = () => {
@@ -26,17 +26,17 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-smooth ${
         isScrolled
-          ? "bg-background/95 backdrop-blur-sm shadow-md"
-          : "bg-transparent"
+          ? "bg-background/95 backdrop-blur-md shadow-card"
+          : "bg-background/60 backdrop-blur-sm"
       }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 gradient-hero rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-xl">V</span>
+          <Link to="/" className="flex items-center space-x-2 group">
+            <div className="w-10 h-10 gradient-hero rounded-lg flex items-center justify-center group-hover:shadow-glow transition-smooth group-hover:scale-110">
+              <Sparkles className="w-5 h-5 text-primary-foreground" />
             </div>
-            <span className="font-display font-bold text-2xl text-foreground">
+            <span className="font-display font-bold text-2xl text-foreground group-hover:text-primary transition-smooth">
               Vawoco
             </span>
           </Link>
@@ -49,36 +49,37 @@ const Header = () => {
                 to={link.to}
                 end={link.to === "/"}
                 className={({ isActive }) =>
-                  `text-sm font-medium transition-smooth hover:text-primary ${
+                  `text-sm font-medium transition-smooth hover:text-primary relative group ${
                     isActive ? "text-primary" : "text-foreground/80"
                   }`
                 }
               >
                 {link.label}
+                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary transform origin-left transition-smooth scale-x-0 group-hover:scale-x-100"></span>
               </NavLink>
             ))}
-            <Button asChild size="sm" className="gradient-hero hover:opacity-90">
+            <Button asChild size="sm" className="gradient-hero hover:opacity-90 shadow-glow hover:shadow-hover transition-smooth hover:scale-105">
               <Link to="/contact">Get Involved</Link>
             </Button>
           </nav>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className="md:hidden p-2 hover:bg-primary/10 rounded-lg transition-smooth"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (
-              <X className="w-6 h-6" />
+              <X className="w-6 h-6 text-primary" />
             ) : (
-              <Menu className="w-6 h-6" />
+              <Menu className="w-6 h-6 text-primary" />
             )}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <nav className="md:hidden pb-4 animate-fade-in">
+          <nav className="md:hidden pb-4 animate-fade-in bg-background/95 backdrop-blur-md rounded-lg p-4 shadow-card">
             {navLinks.map((link) => (
               <NavLink
                 key={link.to}
@@ -86,8 +87,8 @@ const Header = () => {
                 end={link.to === "/"}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={({ isActive }) =>
-                  `block py-2 text-sm font-medium transition-smooth hover:text-primary ${
-                    isActive ? "text-primary" : "text-foreground/80"
+                  `block py-3 text-sm font-medium transition-smooth hover:text-primary hover:bg-primary/5 rounded-lg px-3 ${
+                    isActive ? "text-primary bg-primary/10" : "text-foreground/80"
                   }`
                 }
               >
@@ -97,7 +98,7 @@ const Header = () => {
             <Button
               asChild
               size="sm"
-              className="w-full mt-4 gradient-hero hover:opacity-90"
+              className="w-full mt-4 gradient-hero hover:opacity-90 shadow-glow"
             >
               <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
                 Get Involved
