@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import vawocoLogo from "@/assets/vawoco-logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,14 +11,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About */}
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 gradient-hero rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xl">V</span>
-              </div>
-              <span className="font-display font-bold text-xl text-foreground">
-                Vawoco
-              </span>
-            </div>
+            <img 
+              src={vawocoLogo} 
+              alt="Vawoco Logo" 
+              className="h-16 w-auto mb-4"
+            />
             <p className="text-sm text-muted-foreground">
               Building better communities through innovative projects and meaningful engagement.
             </p>

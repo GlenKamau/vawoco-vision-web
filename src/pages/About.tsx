@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Target, Users, Lightbulb, Award } from "lucide-react";
+import { Target, Users, Lightbulb, Award, Heart } from "lucide-react";
 import aboutImage from "@/assets/about-image.jpg";
 
 const About = () => {
@@ -53,13 +53,19 @@ const About = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      <main>
+      <main className="pt-20">
         {/* Hero Section */}
-        <section className="relative py-20 bg-gradient-hero">
+        <section className="relative py-20 bg-gradient-hero overflow-hidden">
+          {/* Animated Background Elements */}
+          <div className="absolute top-10 right-10 w-64 h-64 bg-white/20 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute bottom-10 left-10 w-48 h-48 bg-secondary/30 rounded-full blur-3xl animate-float" style={{ animationDelay: "1.5s" }}></div>
           <div className="absolute inset-0 opacity-10">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent)]"></div>
           </div>
           <div className="container mx-auto px-4 relative z-10">
+            <div className="inline-block p-3 bg-white/20 rounded-2xl mb-4 animate-float mx-auto block w-fit">
+              <Target className="w-8 h-8 text-primary-foreground" />
+            </div>
             <h1 className="font-display font-bold text-5xl md:text-6xl text-primary-foreground text-center mb-6 animate-fade-in">
               About Vawoco
             </h1>
@@ -70,26 +76,36 @@ const About = () => {
         </section>
 
         {/* Story Section */}
-        <section className="py-20 bg-background">
-          <div className="container mx-auto px-4">
+        <section className="py-20 bg-background relative overflow-hidden">
+          {/* Background Animated Elements */}
+          <div className="absolute top-20 right-20 w-32 h-32 bg-primary/5 rounded-full blur-2xl animate-float"></div>
+          <div className="absolute bottom-20 left-20 w-40 h-40 bg-secondary/5 rounded-full blur-2xl animate-float" style={{ animationDelay: "1s" }}></div>
+          
+          <div className="container mx-auto px-4 relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="animate-fade-in">
+                <div className="inline-block p-2 bg-primary/10 rounded-xl mb-4">
+                  <Heart className="w-6 h-6 text-primary" />
+                </div>
                 <h2 className="font-display font-bold text-4xl mb-6">Our Story</h2>
                 <p className="text-muted-foreground mb-4">
                   Founded in 2015, Vawoco Organization began with a simple but powerful idea: that communities thrive when they have access to the right resources, support, and opportunities. What started as a small grassroots initiative has grown into a comprehensive organization serving thousands of people across multiple programs.
                 </p>
                 <p className="text-muted-foreground mb-4">
-                  Our journey has been marked by a commitment to listening to community needs, adapting our approaches based on feedback and outcomes, and always putting the people we serve at the center of everything we do.
+                  Our journey has been marked by a commitment to listening to community needs, adapting our approaches based on feedback and outcomes, and always putting the people we serve at the center of everything we do. We believe in empowering communities to lead their own transformations, providing the tools and support needed for sustainable change.
+                </p>
+                <p className="text-muted-foreground mb-4">
+                  Today, Vawoco operates four major program areas—environmental sustainability, education, community care, and innovation—each designed to address critical needs and create pathways to prosperity. Our holistic approach recognizes that these areas are interconnected and that lasting change requires addressing multiple dimensions of community wellbeing simultaneously.
                 </p>
                 <p className="text-muted-foreground">
-                  Today, Vawoco operates four major program areas—environmental sustainability, education, community care, and innovation—each designed to address critical needs and create pathways to prosperity. But our work is far from done, and we continue to evolve and expand our impact every day.
+                  But our work is far from done. With climate change accelerating, educational disparities persisting, and economic inequality growing, the need for dedicated, community-focused organizations has never been greater. We continue to evolve and expand our impact every day, driven by the belief that together, we can build stronger, more resilient communities.
                 </p>
               </div>
-              <div className="animate-scale-in">
+              <div className="animate-scale-in group">
                 <img
                   src={aboutImage}
                   alt="Vawoco team collaboration"
-                  className="rounded-2xl shadow-hover w-full"
+                  className="rounded-2xl shadow-hover w-full group-hover:shadow-glow transition-smooth"
                 />
               </div>
             </div>
@@ -126,8 +142,21 @@ const About = () => {
         </section>
 
         {/* Team Section */}
-        <section className="py-20 bg-background">
-          <div className="container mx-auto px-4">
+        <section className="py-20 bg-background relative overflow-hidden">
+          {/* Animated Icons */}
+          <div className="absolute top-10 left-10 animate-float">
+            <Users className="w-12 h-12 text-primary/10" />
+          </div>
+          <div className="absolute bottom-10 right-10 animate-float" style={{ animationDelay: "0.5s" }}>
+            <Award className="w-16 h-16 text-secondary/10" />
+          </div>
+          
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="text-center mb-6">
+              <div className="inline-block p-3 bg-primary/10 rounded-2xl mb-4 animate-float">
+                <Users className="w-8 h-8 text-primary" />
+              </div>
+            </div>
             <h2 className="font-display font-bold text-4xl text-center mb-16 animate-fade-in">
               Meet Our Leadership
             </h2>
@@ -135,11 +164,11 @@ const About = () => {
               {team.map((member, index) => (
                 <div
                   key={index}
-                  className="text-center animate-scale-in"
+                  className="text-center animate-scale-in group"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className="w-32 h-32 mx-auto mb-4 gradient-hero rounded-full"></div>
-                  <h3 className="font-display font-semibold text-xl mb-1">
+                  <div className="w-32 h-32 mx-auto mb-4 gradient-hero rounded-full group-hover:shadow-glow transition-smooth group-hover:scale-110"></div>
+                  <h3 className="font-display font-semibold text-xl mb-1 group-hover:text-primary transition-smooth">
                     {member.name}
                   </h3>
                   <p className="text-sm text-primary mb-3">{member.role}</p>

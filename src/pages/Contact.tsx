@@ -1,13 +1,19 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { Mail, Phone, MapPin, Send, MessageSquare, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { useState } from "react";
 
 const Contact = () => {
   const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -15,146 +21,161 @@ const Contact = () => {
       title: "Message Sent!",
       description: "Thank you for reaching out. We'll get back to you soon.",
     });
+    setFormData({ name: "", email: "", message: "" });
   };
 
   const contactInfo = [
     {
-      icon: MapPin,
-      title: "Visit Us",
-      details: ["123 Community Street", "City, State 12345", "United States"],
-    },
-    {
       icon: Phone,
-      title: "Call Us",
-      details: ["+1 (555) 123-4567", "+1 (555) 987-6543"],
+      title: "Phone",
+      value: "+1 (555) 123-4567",
     },
     {
       icon: Mail,
-      title: "Email Us",
-      details: ["info@vawoco.org", "support@vawoco.org"],
+      title: "Email",
+      value: "info@vawoco.org",
     },
     {
-      icon: Clock,
-      title: "Office Hours",
-      details: ["Monday - Friday: 9AM - 5PM", "Saturday: 10AM - 2PM", "Sunday: Closed"],
+      icon: MapPin,
+      title: "Address",
+      value: "123 Community St, City, State 12345",
     },
   ];
 
   return (
     <div className="min-h-screen">
       <Header />
-      <main>
+      <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-hero">
-          <div className="container mx-auto px-4">
+        <section className="py-20 bg-gradient-hero relative overflow-hidden">
+          {/* Animated Background Elements */}
+          <div className="absolute top-10 right-10 w-64 h-64 bg-white/20 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute bottom-10 left-10 w-48 h-48 bg-secondary/30 rounded-full blur-3xl animate-float" style={{ animationDelay: "1.5s" }}></div>
+          <div className="absolute top-1/3 left-1/3 animate-float" style={{ animationDelay: "0.7s" }}>
+            <MessageSquare className="w-16 h-16 text-white/15" />
+          </div>
+          <div className="absolute bottom-1/3 right-1/3 animate-float" style={{ animationDelay: "1.2s" }}>
+            <Sparkles className="w-12 h-12 text-white/20" />
+          </div>
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent)]"></div>
+          </div>
+          
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="inline-block p-3 bg-white/20 rounded-2xl mb-4 animate-float mx-auto block w-fit">
+              <MessageSquare className="w-8 h-8 text-primary-foreground" />
+            </div>
             <h1 className="font-display font-bold text-5xl md:text-6xl text-primary-foreground text-center mb-6 animate-fade-in">
               Get in Touch
             </h1>
             <p className="text-xl text-primary-foreground/90 text-center max-w-3xl mx-auto animate-fade-in">
-              Have questions or want to get involved? We'd love to hear from you. Reach out to us through any of the channels below.
+              Have questions or want to get involved? We'd love to hear from you.
             </p>
           </div>
         </section>
 
-        {/* Contact Info Cards */}
-        <section className="py-20 bg-gradient-subtle">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-              {contactInfo.map((info, index) => {
-                const Icon = info.icon;
-                return (
-                  <div
-                    key={index}
-                    className="bg-card rounded-2xl p-6 shadow-card hover:shadow-hover transition-smooth animate-scale-in text-center"
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                  >
-                    <div className="w-14 h-14 mx-auto mb-4 gradient-hero rounded-2xl flex items-center justify-center">
-                      <Icon className="w-7 h-7 text-primary-foreground" />
-                    </div>
-                    <h3 className="font-display font-semibold text-lg mb-3">
-                      {info.title}
-                    </h3>
-                    {info.details.map((detail, i) => (
-                      <p key={i} className="text-sm text-muted-foreground">
-                        {detail}
-                      </p>
-                    ))}
+        {/* Contact Section */}
+        <section className="py-20 bg-background relative overflow-hidden">
+          {/* Background Animated Elements */}
+          <div className="absolute top-20 right-20 w-40 h-40 bg-primary/5 rounded-full blur-2xl animate-float"></div>
+          <div className="absolute bottom-20 left-20 w-32 h-32 bg-secondary/5 rounded-full blur-2xl animate-float" style={{ animationDelay: "1s" }}></div>
+          <div className="absolute top-1/2 right-10 animate-float" style={{ animationDelay: "0.5s" }}>
+            <Mail className="w-16 h-16 text-primary/5" />
+          </div>
+          
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              {/* Contact Information */}
+              <div className="space-y-8 animate-fade-in">
+                <div>
+                  <div className="inline-block p-2 bg-primary/10 rounded-xl mb-4 animate-float">
+                    <Phone className="w-6 h-6 text-primary" />
                   </div>
-                );
-              })}
-            </div>
+                  <h2 className="font-display font-bold text-3xl mb-8">
+                    Contact Information
+                  </h2>
+                  <div className="space-y-6">
+                    {contactInfo.map((info, index) => {
+                      const Icon = info.icon;
+                      return (
+                        <div 
+                          key={index} 
+                          className="flex items-start gap-4 group hover:bg-primary/5 p-4 rounded-xl transition-smooth cursor-pointer"
+                        >
+                          <div className="w-12 h-12 gradient-hero rounded-xl flex items-center justify-center flex-shrink-0 group-hover:shadow-glow transition-smooth group-hover:scale-110">
+                            <Icon className="w-6 h-6 text-primary-foreground" />
+                          </div>
+                          <div>
+                            <h3 className="font-semibold mb-1 group-hover:text-primary transition-smooth">{info.title}</h3>
+                            <p className="text-muted-foreground">{info.value}</p>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
 
-            {/* Contact Form */}
-            <div className="max-w-3xl mx-auto">
-              <div className="bg-card rounded-2xl p-8 shadow-card">
-                <h2 className="font-display font-bold text-3xl mb-6 text-center">
-                  Send Us a Message
-                </h2>
+              {/* Contact Form */}
+              <div className="bg-card rounded-2xl p-8 shadow-card animate-scale-in hover:shadow-hover transition-smooth">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="p-2 bg-primary/10 rounded-lg animate-float">
+                    <Send className="w-5 h-5 text-primary" />
+                  </div>
+                  <h2 className="font-display font-bold text-2xl">
+                    Send us a Message
+                  </h2>
+                </div>
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium mb-2">
-                        First Name
-                      </label>
-                      <Input placeholder="John" required />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium mb-2">
-                        Last Name
-                      </label>
-                      <Input placeholder="Doe" required />
-                    </div>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium mb-2">
-                      Email Address
+                  <div className="group">
+                    <label htmlFor="name" className="block text-sm font-medium mb-2 group-hover:text-primary transition-smooth">
+                      Name
                     </label>
-                    <Input type="email" placeholder="john@example.com" required />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium mb-2">
-                      Phone Number (Optional)
-                    </label>
-                    <Input type="tel" placeholder="+1 (555) 123-4567" />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium mb-2">
-                      Subject
-                    </label>
-                    <Input placeholder="How can we help you?" required />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium mb-2">
-                      Message
-                    </label>
-                    <Textarea
-                      placeholder="Tell us more about your inquiry..."
-                      rows={6}
+                    <Input
+                      id="name"
+                      value={formData.name}
+                      onChange={(e) =>
+                        setFormData({ ...formData, name: e.target.value })
+                      }
+                      className="transition-smooth focus:shadow-glow"
                       required
                     />
                   </div>
-                  <Button
-                    type="submit"
-                    size="lg"
-                    className="w-full gradient-hero hover:opacity-90"
-                  >
+                  <div className="group">
+                    <label htmlFor="email" className="block text-sm font-medium mb-2 group-hover:text-primary transition-smooth">
+                      Email
+                    </label>
+                    <Input
+                      id="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={(e) =>
+                        setFormData({ ...formData, email: e.target.value })
+                      }
+                      className="transition-smooth focus:shadow-glow"
+                      required
+                    />
+                  </div>
+                  <div className="group">
+                    <label htmlFor="message" className="block text-sm font-medium mb-2 group-hover:text-primary transition-smooth">
+                      Message
+                    </label>
+                    <Textarea
+                      id="message"
+                      value={formData.message}
+                      onChange={(e) =>
+                        setFormData({ ...formData, message: e.target.value })
+                      }
+                      rows={5}
+                      className="transition-smooth focus:shadow-glow"
+                      required
+                    />
+                  </div>
+                  <Button type="submit" className="w-full gradient-hero hover:opacity-90 shadow-glow hover:shadow-hover transition-smooth hover:scale-105 group">
                     Send Message
+                    <Send className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-smooth" />
                   </Button>
                 </form>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Map Section */}
-        <section className="py-20 bg-background">
-          <div className="container mx-auto px-4">
-            <h2 className="font-display font-bold text-3xl mb-8 text-center">
-              Find Us Here
-            </h2>
-            <div className="max-w-5xl mx-auto">
-              <div className="aspect-video bg-muted rounded-2xl shadow-card flex items-center justify-center">
-                <p className="text-muted-foreground">Map placeholder</p>
               </div>
             </div>
           </div>

@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { Menu, X, Sparkles } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import vawocoLogo from "@/assets/vawoco-logo.png";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,12 +34,11 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center space-x-2 group">
-            <div className="w-10 h-10 gradient-hero rounded-lg flex items-center justify-center group-hover:shadow-glow transition-smooth group-hover:scale-110">
-              <Sparkles className="w-5 h-5 text-primary-foreground" />
-            </div>
-            <span className="font-display font-bold text-2xl text-foreground group-hover:text-primary transition-smooth">
-              Vawoco
-            </span>
+            <img 
+              src={vawocoLogo} 
+              alt="Vawoco Logo" 
+              className="h-14 w-auto transition-smooth group-hover:scale-110 group-hover:drop-shadow-glow"
+            />
           </Link>
 
           {/* Desktop Navigation */}
