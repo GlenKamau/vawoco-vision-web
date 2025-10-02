@@ -14,7 +14,7 @@ const Footer = () => {
             <img 
               src={vawocoLogo} 
               alt="Vawoco Logo" 
-              className="h-16 w-auto mb-4"
+              className="h-36 w-auto mb-4"
             />
             <p className="text-sm text-muted-foreground">
               Building better communities through innovative projects and meaningful engagement.
