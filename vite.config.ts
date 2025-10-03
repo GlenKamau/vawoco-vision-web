@@ -10,10 +10,7 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
-  base: "./",
-  build: {
-    outDir: 'docs',   // 👈 output build into /docs
-  },
+  base: process.env.NODE_ENV === 'production' ? '/vawoco-vision-web/' : '/',
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
