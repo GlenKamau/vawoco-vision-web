@@ -50,24 +50,23 @@ const ProjectsSection = () => {
   return (
     <section className="relative py-32 overflow-hidden">
       {/* Parallax Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/10">
-        <div 
-          className="absolute inset-0 opacity-30"
-          style={{
-            backgroundImage: `radial-gradient(circle at 20% 50%, hsl(var(--primary) / 0.1) 0%, transparent 50%),
-                             radial-gradient(circle at 80% 80%, hsl(var(--secondary) / 0.1) 0%, transparent 50%),
-                             radial-gradient(circle at 40% 20%, hsl(var(--accent) / 0.15) 0%, transparent 50%)`,
-          }}
-        />
-        <div 
-          className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage: `linear-gradient(to right, hsl(var(--border)) 1px, transparent 1px),
-                             linear-gradient(to bottom, hsl(var(--border)) 1px, transparent 1px)`,
-            backgroundSize: '100px 100px',
-          }}
-        />
+      <div
+        className="absolute inset-0 bg-fixed"
+        style={{
+          backgroundImage: `
+            radial-gradient(circle at 20% 30%, hsl(var(--primary) / 0.12) 0%, transparent 60%),
+            radial-gradient(circle at 80% 70%, hsl(var(--accent) / 0.10) 0%, transparent 65%),
+            linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--secondary) / 0.05) 100%)
+          `,
+          backgroundSize: "400px 400px, 500px 500px, cover",
+          backgroundAttachment: "fixed",
+        }}
+      >
+        {/* Soft overlay for focus */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-transparent to-white/60"></div>
       </div>
+
+
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-20">

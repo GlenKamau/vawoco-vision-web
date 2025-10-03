@@ -30,7 +30,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      value: "+1 (555) 123-4567",
+      value: "+254 (700) 322-745",
     },
     {
       icon: Mail,
@@ -40,7 +40,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Address",
-      value: "123 Community St, City, State 12345",
+      value: "Nairobi,Kenya",
     },
   ];
 
