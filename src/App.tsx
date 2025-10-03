@@ -18,7 +18,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename={process.env.NODE_ENV === 'production' ? '/vawoco-vision-web' : '/'}>
+      <BrowserRouter basename="/vawoco-vision-web">
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
