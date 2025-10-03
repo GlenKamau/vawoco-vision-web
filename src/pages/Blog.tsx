@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import CookieConsent from "@/components/CookieConsent";
 import { blogPosts } from "@/data/blogData";
 import { Link } from "react-router-dom";
 import { ArrowRight, BookOpen, Sparkles, TrendingUp, Zap, Star } from "lucide-react";
@@ -69,6 +70,16 @@ const Blog = () => {
           </div>
         </section>
 
+        {/* Subtitle Section */}
+        <section className="py-12 bg-background/50 backdrop-blur-sm border-y border-primary/10">
+          <div className="container mx-auto px-4 text-center">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in">
+              Join us on our journey as we share real stories, proven solutions, and transformative initiatives 
+              that are reshaping communities and building a sustainable future for all.
+            </p>
+          </div>
+        </section>
+
         {/* Blog Posts Grid */}
         <section className="py-20 bg-background relative overflow-hidden">
           {/* Background Animated Elements */}
@@ -127,6 +138,7 @@ const Blog = () => {
         </section>
       </main>
       <Footer />
+      <CookieConsent />
     </div>
   );
 };
