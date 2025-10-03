@@ -86,31 +86,58 @@ const About = () => {
         <section className="py-20 bg-background relative overflow-hidden">
           {/* Background Animated Elements */}
           <div className="absolute top-20 right-20 w-32 h-32 bg-primary/5 rounded-full blur-2xl animate-float"></div>
-          <div className="absolute bottom-20 left-20 w-40 h-40 bg-secondary/5 rounded-full blur-2xl animate-float" style={{ animationDelay: "1s" }}></div>
-          
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div className="animate-fade-in">
-                <div className="inline-block p-2 bg-primary/10 rounded-xl mb-4">
-                  <Heart className="w-6 h-6 text-primary" />
-                </div>
-                <h2 className="font-display font-bold text-4xl mb-6">Our Story</h2>
-                <p className="text-muted-foreground mb-4">
-                  Founded in 2015, Vawoco Organization began with a simple but powerful idea: that communities thrive when they have access to the right resources, support, and opportunities. What started as a small grassroots initiative has grown into a comprehensive organization serving thousands of people across multiple programs.
-                </p>
-                <p className="text-muted-foreground mb-4">
-                  Our journey has been marked by a commitment to listening to community needs, adapting our approaches based on feedback and outcomes, and always putting the people we serve at the center of everything we do. We believe in empowering communities to lead their own transformations, providing the tools and support needed for sustainable change.
-                </p>
-                <p className="text-muted-foreground mb-4">
-                  Today, Vawoco operates four major program areas—environmental sustainability, education, community care, and innovation—each designed to address critical needs and create pathways to prosperity. Our holistic approach recognizes that these areas are interconnected and that lasting change requires addressing multiple dimensions of community wellbeing simultaneously.
-                </p>
-                <p className="text-muted-foreground">
-                  But our work is far from done. With climate change accelerating, educational disparities persisting, and economic inequality growing, the need for dedicated, community-focused organizations has never been greater. We continue to evolve and expand our impact every day, driven by the belief that together, we can build stronger, more resilient communities.
-                </p>
+          <div
+            className="absolute bottom-20 left-20 w-40 h-40 bg-secondary/5 rounded-full blur-2xl animate-float"
+            style={{ animationDelay: "1s" }}
+          ></div>
+
+          <div className="container mx-auto px-6 relative z-10">
+            {/* Title Section */}
+            <div className="text-center mb-12 animate-fade-in">
+              <div className="inline-block p-2 bg-primary/10 rounded-xl mb-4">
+                <Heart className="w-6 h-6 text-primary" />
               </div>
+              <h2 className="font-display font-bold text-4xl md:text-5xl">
+                Our Story
+              </h2>
+            </div>
+
+            {/* Content Section */}
+            <div className="max-w-5xl mx-auto space-y-6 text-justify">
+              <p className="text-muted-foreground">
+                Founded in 2015, Vawoco Organization began with a simple but powerful
+                idea: that communities thrive when they have access to the right
+                resources, support, and opportunities. What started as a small
+                grassroots initiative has grown into a comprehensive organization
+                serving thousands of people across multiple programs.
+              </p>
+              <p className="text-muted-foreground">
+                Our journey has been marked by a commitment to listening to community
+                needs, adapting our approaches based on feedback and outcomes, and
+                always putting the people we serve at the center of everything we do.
+                We believe in empowering communities to lead their own transformations,
+                providing the tools and support needed for sustainable change.
+              </p>
+              <p className="text-muted-foreground">
+                Today, Vawoco operates four major program areas—environmental
+                sustainability, education, community care, and innovation—each designed
+                to address critical needs and create pathways to prosperity. Our
+                holistic approach recognizes that these areas are interconnected and
+                that lasting change requires addressing multiple dimensions of
+                community wellbeing simultaneously.
+              </p>
+              <p className="text-muted-foreground">
+                But our work is far from done. With climate change accelerating,
+                educational disparities persisting, and economic inequality growing,
+                the need for dedicated, community-focused organizations has never been
+                greater. We continue to evolve and expand our impact every day, driven
+                by the belief that together, we can build stronger, more resilient
+                communities.
+              </p>
             </div>
           </div>
         </section>
+
 
         {/* Values Section */}
         <section className="py-20 bg-gradient-subtle">

@@ -120,32 +120,50 @@ const ProjectDetail = () => {
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="relative py-20 bg-gradient-hero overflow-hidden">
+        <section className="relative py-20 bg-gradient-hero overflow-hidden text-gray-900">
+          {/* Floating Elements */}
           <div className="absolute top-10 right-10 w-64 h-64 bg-white/20 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute bottom-10 left-10 w-48 h-48 bg-secondary/30 rounded-full blur-3xl animate-float" style={{ animationDelay: "1.5s" }}></div>
-          <div className="absolute top-1/3 right-1/4 animate-float" style={{ animationDelay: "0.7s" }}>
-            <Sparkles className="w-16 h-16 text-white/15" />
+          <div
+            className="absolute bottom-10 left-10 w-48 h-48 bg-secondary/30 rounded-full blur-3xl animate-float"
+            style={{ animationDelay: "1.5s" }}
+          ></div>
+          <div
+            className="absolute top-1/3 right-1/4 animate-float"
+            style={{ animationDelay: "0.7s" }}
+          >
+            <Sparkles className="w-16 h-16 text-gray-400" />
           </div>
-          <div className="absolute bottom-1/3 left-1/3 animate-float" style={{ animationDelay: "1.2s" }}>
-            <TrendingUp className="w-12 h-12 text-white/20" />
+          <div
+            className="absolute bottom-1/3 left-1/3 animate-float"
+            style={{ animationDelay: "1.2s" }}
+          >
+            <TrendingUp className="w-12 h-12 text-gray-500" />
           </div>
-          
+
+          {/* Content */}
           <div className="container mx-auto px-4 relative z-10">
-            <Link to="/" className="inline-flex items-center text-primary-foreground/80 hover:text-primary-foreground mb-8 transition-smooth group">
+            <Link
+              to="/"
+              className="inline-flex items-center text-gray-700 hover:text-black mb-8 transition-smooth group"
+            >
               <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-smooth" />
               Back to Home
             </Link>
-            <div className="inline-block p-3 bg-white/20 rounded-2xl mb-4 animate-float">
-              <Icon className="w-8 h-8 text-primary-foreground" />
+
+            <div className="inline-block p-3 bg-gray-200 rounded-2xl mb-4 animate-float">
+              <Icon className="w-8 h-8 text-gray-800" />
             </div>
-            <h1 className="font-display font-bold text-5xl md:text-6xl text-primary-foreground mb-6 animate-fade-in">
+
+            <h1 className="font-display font-bold text-5xl md:text-6xl text-gray-900 mb-6 animate-fade-in">
               {project.title}
             </h1>
-            <p className="text-xl text-primary-foreground/90 max-w-3xl animate-fade-in">
+
+            <p className="text-xl text-gray-700 max-w-3xl animate-fade-in">
               {project.description}
             </p>
           </div>
         </section>
+
 
         {/* Project Image */}
         <section className="py-20 bg-background relative overflow-hidden">
