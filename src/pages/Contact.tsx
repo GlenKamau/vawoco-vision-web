@@ -1,6 +1,8 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Mail, Phone, MapPin, Send, MessageSquare, Sparkles } from "lucide-react";
+import { Mail, Phone, MapPin, Send, MessageSquare, Sparkles, Zap, Star } from "lucide-react";
+import contactHero from "@/assets/contact-hero.jpg";
+import SpinningKeywords from "@/components/SpinningKeywords";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -46,31 +48,27 @@ const Contact = () => {
     <div className="min-h-screen">
       <Header />
       <main className="pt-20">
-        {/* Hero Section */}
-        <section className="py-20 bg-gradient-hero relative overflow-hidden">
-          {/* Animated Background Elements */}
-          <div className="absolute top-10 right-10 w-64 h-64 bg-white/20 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute bottom-10 left-10 w-48 h-48 bg-secondary/30 rounded-full blur-3xl animate-float" style={{ animationDelay: "1.5s" }}></div>
-          <div className="absolute top-1/3 left-1/3 animate-float" style={{ animationDelay: "0.7s" }}>
-            <MessageSquare className="w-16 h-16 text-white/15" />
-          </div>
-          <div className="absolute bottom-1/3 right-1/3 animate-float" style={{ animationDelay: "1.2s" }}>
-            <Sparkles className="w-12 h-12 text-white/20" />
-          </div>
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent)]"></div>
-          </div>
+        {/* Hero Section with Image & Text */}
+        <section className="py-20 bg-gradient-subtle relative overflow-hidden">
+          <div className="absolute top-10 right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute bottom-10 left-10 w-48 h-48 bg-secondary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "1.5s" }}></div>
           
           <div className="container mx-auto px-4 relative z-10">
-            <div className="inline-block p-3 bg-white/20 rounded-2xl mb-4 animate-float mx-auto block w-fit">
-              <MessageSquare className="w-8 h-8 text-primary-foreground" />
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="order-2 lg:order-1 animate-scale-in">
+                <div className="relative rounded-2xl overflow-hidden shadow-hover group">
+                  <img src={contactHero} alt="Contact us" className="w-full h-[500px] object-cover group-hover:scale-105 transition-smooth" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 group-hover:opacity-75 transition-smooth"></div>
+                </div>
+              </div>
+              <div className="order-1 lg:order-2 animate-fade-in">
+                <h1 className="font-display font-bold text-5xl md:text-6xl mb-6">
+                  Let's Start a{" "}
+                  <SpinningKeywords keywords={["Conversation", "Partnership", "Journey", "Connection"]} className="text-5xl md:text-6xl" />
+                </h1>
+                <p className="text-xl text-muted-foreground">Have questions or want to get involved? We'd love to hear from you.</p>
+              </div>
             </div>
-            <h1 className="font-display font-bold text-5xl md:text-6xl text-primary-foreground text-center mb-6 animate-fade-in">
-              Get in Touch
-            </h1>
-            <p className="text-xl text-primary-foreground/90 text-center max-w-3xl mx-auto animate-fade-in">
-              Have questions or want to get involved? We'd love to hear from you.
-            </p>
           </div>
         </section>
 

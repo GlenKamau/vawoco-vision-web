@@ -1,7 +1,8 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Target, Users, Lightbulb, Award, Heart } from "lucide-react";
-import aboutImage from "@/assets/about-image.jpg";
+import { Target, Users, Lightbulb, Award, Heart, Sparkles, TrendingUp, Zap, Star } from "lucide-react";
+import aboutHero from "@/assets/about-hero.jpg";
+import SpinningKeywords from "@/components/SpinningKeywords";
 
 const About = () => {
   const team = [
@@ -54,24 +55,30 @@ const About = () => {
     <div className="min-h-screen">
       <Header />
       <main className="pt-20">
-        {/* Hero Section */}
-        <section className="relative py-20 bg-gradient-hero overflow-hidden">
-          {/* Animated Background Elements */}
-          <div className="absolute top-10 right-10 w-64 h-64 bg-white/20 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute bottom-10 left-10 w-48 h-48 bg-secondary/30 rounded-full blur-3xl animate-float" style={{ animationDelay: "1.5s" }}></div>
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent)]"></div>
+        {/* Hero Section with Image & Text */}
+        <section className="relative py-20 bg-gradient-subtle overflow-hidden">
+          <div className="absolute top-10 right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute bottom-10 left-10 w-48 h-48 bg-secondary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "1.5s" }}></div>
+          <div className="absolute top-1/4 right-1/4 animate-float" style={{ animationDelay: "0.7s" }}>
+            <Sparkles className="w-16 h-16 text-primary/10" />
           </div>
+          
           <div className="container mx-auto px-4 relative z-10">
-            <div className="inline-block p-3 bg-white/20 rounded-2xl mb-4 animate-float mx-auto block w-fit">
-              <Target className="w-8 h-8 text-primary-foreground" />
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="order-2 lg:order-1 animate-scale-in">
+                <div className="relative rounded-2xl overflow-hidden shadow-hover group">
+                  <img src={aboutHero} alt="Vawoco team collaboration" className="w-full h-[500px] object-cover group-hover:scale-105 transition-smooth" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 group-hover:opacity-75 transition-smooth"></div>
+                </div>
+              </div>
+              <div className="order-1 lg:order-2 animate-fade-in">
+                <h1 className="font-display font-bold text-5xl md:text-6xl mb-6">
+                  Empowering Communities Through{" "}
+                  <SpinningKeywords keywords={["Innovation", "Collaboration", "Sustainability", "Excellence"]} className="text-5xl md:text-6xl" />
+                </h1>
+                <p className="text-xl text-muted-foreground">We are a community-focused organization dedicated to creating meaningful, lasting change through innovative programs and collaborative partnerships.</p>
+              </div>
             </div>
-            <h1 className="font-display font-bold text-5xl md:text-6xl text-primary-foreground text-center mb-6 animate-fade-in">
-              About Vawoco
-            </h1>
-            <p className="text-xl text-primary-foreground/90 text-center max-w-3xl mx-auto animate-fade-in">
-              We are a community-focused organization dedicated to creating meaningful, lasting change through innovative programs and collaborative partnerships.
-            </p>
           </div>
         </section>
 
@@ -100,13 +107,6 @@ const About = () => {
                 <p className="text-muted-foreground">
                   But our work is far from done. With climate change accelerating, educational disparities persisting, and economic inequality growing, the need for dedicated, community-focused organizations has never been greater. We continue to evolve and expand our impact every day, driven by the belief that together, we can build stronger, more resilient communities.
                 </p>
-              </div>
-              <div className="animate-scale-in group">
-                <img
-                  src={aboutImage}
-                  alt="Vawoco team collaboration"
-                  className="rounded-2xl shadow-hover w-full group-hover:shadow-glow transition-smooth"
-                />
               </div>
             </div>
           </div>

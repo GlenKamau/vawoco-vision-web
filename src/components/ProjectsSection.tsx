@@ -1,6 +1,7 @@
 import { Leaf, GraduationCap, HeartHandshake, Lightbulb, ArrowRight } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import projectGreen from "@/assets/project-green.jpg";
 import projectEducation from "@/assets/project-education.jpg";
 import projectCommunity from "@/assets/project-community.jpg";
@@ -9,6 +10,7 @@ import projectInnovation from "@/assets/project-innovation.jpg";
 const ProjectsSection = () => {
   const projects = [
     {
+      id: "green-initiative",
       icon: Leaf,
       title: "Green Initiative",
       description: "Our Green Initiative promotes environmental sustainability through community-led conservation projects. We work with local communities to plant trees, create urban gardens, and implement eco-friendly practices that protect our planet for future generations.",
@@ -17,6 +19,7 @@ const ProjectsSection = () => {
       longDescription: "This program focuses on environmental education, sustainable agriculture, and climate action. We've established community gardens in 10 neighborhoods and trained over 200 volunteers in conservation techniques.",
     },
     {
+      id: "education-first",
       icon: GraduationCap,
       title: "Education First",
       description: "Education First provides access to quality education and learning resources for underserved communities. We believe every child deserves the opportunity to learn, grow, and reach their full potential through comprehensive educational support.",
@@ -25,6 +28,7 @@ const ProjectsSection = () => {
       longDescription: "Our education programs include after-school tutoring, scholarship opportunities, and technology access. We've partnered with 15 schools to provide educational materials and trained mentors for students.",
     },
     {
+      id: "community-care",
       icon: HeartHandshake,
       title: "Community Care",
       description: "Community Care supports local families with essential services, healthcare access, and social programs. We provide comprehensive support systems that strengthen communities and help families overcome challenges together.",
@@ -33,6 +37,7 @@ const ProjectsSection = () => {
       longDescription: "This initiative offers food assistance, healthcare coordination, and family counseling services. We operate 3 community centers providing daily support and have distributed over 50,000 meals to families in need.",
     },
     {
+      id: "innovation-hub",
       icon: Lightbulb,
       title: "Innovation Hub",
       description: "Innovation Hub empowers entrepreneurs and innovators with resources, mentorship, and funding opportunities. We foster creativity and business development to drive economic growth and create sustainable employment in our communities.",
@@ -116,11 +121,14 @@ const ProjectsSection = () => {
                       </span>
                     </div>
                     <Button 
+                      asChild
                       variant="ghost" 
                       className="group/btn hover:text-primary"
                     >
-                      Learn More
-                      <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover/btn:translate-x-1" />
+                      <Link to={`/project/${project.id}`}>
+                        Learn More
+                        <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover/btn:translate-x-1" />
+                      </Link>
                     </Button>
                   </div>
                 </CardContent>
