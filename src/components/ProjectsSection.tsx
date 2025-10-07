@@ -53,19 +53,23 @@ const ProjectsSection = () => {
       <div
         className="absolute inset-0 bg-fixed"
         style={{
-          backgroundImage: `
-            radial-gradient(circle at 20% 30%, hsl(var(--primary) / 0.12) 0%, transparent 60%),
-            radial-gradient(circle at 80% 70%, hsl(var(--accent) / 0.10) 0%, transparent 65%),
-            linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--secondary) / 0.05) 100%)
+          background: `
+            repeating-radial-gradient(circle at 20% 20%, rgba(255,182,193,0.25) 0, rgba(255,182,193,0.25) 2px, transparent 4px),
+            repeating-radial-gradient(circle at 80% 80%, rgba(255,182,193,0.25) 0, rgba(255,182,193,0.25) 2px, transparent 4px),
+            linear-gradient(135deg, #fff 0%, #fff0f5 100%)
           `,
-          backgroundSize: "400px 400px, 500px 500px, cover",
+          backgroundSize: "200px 200px, 200px 200px, cover",
           backgroundAttachment: "fixed",
         }}
       >
-        {/* Soft overlay for focus */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-transparent to-white/60"></div>
+        {/* Overlay to soften and blend */}
+        <div className="absolute inset-0 bg-white/50"></div>
       </div>
 
+      {/* Content */}
+      <div className="relative z-10">
+        {/* your section content */}
+      </div>
 
 
       <div className="container mx-auto px-4 relative z-10">

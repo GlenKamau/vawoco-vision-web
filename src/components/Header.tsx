@@ -25,21 +25,23 @@ const Header = () => {
   ];
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-smooth ${
-        isScrolled
-          ? "bg-background/65 backdrop-blur-md shadow-card"
-          : "bg-background/30 backdrop-blur-sm"
-      }`}
-    >
+<header
+  className={`fixed top-0 left-0 right-0 z-50 transition-smooth py-4 md:py-6 lg:py-8 ${
+    isScrolled
+      ? "bg-background/65 backdrop-blur-md shadow-card"
+      : "bg-background/30 backdrop-blur-sm"
+  }`}
+>
+
       <div className="container mx-auto px-4 pt-6 pb-4">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center space-x-2 group">
-            <img 
-              src={vawocoLogo} 
-              alt="Vawoco Logo" 
-              className="h-12 md:h-28 lg:h-32 flex items-centre w-auto transition-smooth group-hover:scale-110 group-hover:drop-shadow-glow"
-            />
+<img 
+  src={vawocoLogo} 
+  alt="Vawoco Logo" 
+  className="h-24 md:h-40 lg:h-48 flex items-center w-auto transition-smooth group-hover:scale-110 group-hover:drop-shadow-glow"
+/>
+
           </Link>
 
           {/* Desktop Navigation */}

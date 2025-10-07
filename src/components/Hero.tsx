@@ -1,3 +1,5 @@
+"use client";
+
 import { ArrowRight, Heart, Smartphone, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -12,6 +14,9 @@ import Autoplay from "embla-carousel-autoplay";
 import heroEwaste from "@/assets/hero-ewaste.jpg";
 import heroRecycling from "@/assets/hero-recycling.jpg";
 import heroPhoneRepair from "@/assets/hero-phone-repair.jpg";
+
+// 👇 Import the TextType component
+import TextType from "@/components/TextType"; // Adjust path based on your file structure
 
 const slides = [
   { image: heroEwaste },
@@ -62,34 +67,57 @@ const Hero = () => {
               <div className="p-4 bg-primary/20 rounded-2xl backdrop-blur-sm shadow-glow animate-float">
                 <Smartphone className="w-12 h-12 text-primary" />
               </div>
-              <div className="p-4 bg-secondary/20 rounded-2xl backdrop-blur-sm shadow-glow animate-float" style={{ animationDelay: "0.5s" }}>
+              <div
+                className="p-4 bg-secondary/20 rounded-2xl backdrop-blur-sm shadow-glow animate-float"
+                style={{ animationDelay: "0.5s" }}
+              >
                 <Heart className="w-12 h-12 text-secondary" />
               </div>
-              <div className="p-4 bg-primary-glow/20 rounded-2xl backdrop-blur-sm shadow-glow animate-float" style={{ animationDelay: "1s" }}>
+              <div
+                className="p-4 bg-primary-glow/20 rounded-2xl backdrop-blur-sm shadow-glow animate-float"
+                style={{ animationDelay: "1s" }}
+              >
                 <Users className="w-12 h-12 text-primary-glow" />
               </div>
             </div>
 
-            {/* Headline */}
-            <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl mb-6 animate-fade-in leading-tight">
-              Giving discarded phones a{" "}
-              <span className="text-primary animate-pulse-slow">second life</span> —<br />
-              and people a{" "}
-              <span className="text-secondary animate-pulse-slow">first chance</span>.
+            {/* Headline (with TextType animation) */}
+            <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl mb-6 animate-fade-in leading-tight text-black">
+              <TextType
+                text={[
+                  "Giving discarded phones a <span style='color:#9333EA;'>second life</span> — and people a <span style='color:#EC4899;'>first chance</span>.",
+                  // "Transforming <span style='color:#9333EA;'>E-waste</span> into <span style='color:#EC4899;'>Opportunity</span>.",
+                  // "Empowering <span style='color:#9333EA;'>communities</span> through <span style='color:#EC4899;'>technology</span>.",
+                ]}
+                typingSpeed={50}
+                deletingSpeed={30}
+                pauseDuration={2000}
+                loop={true}
+                allowHtml={true}
+                className="text-black"
+              />
             </h1>
 
             {/* Subheading */}
-            <div className="mb-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            <div
+              className="mb-8 animate-fade-in"
+              style={{ animationDelay: "0.2s" }}
+            >
               <p className="text-xl md:text-2xl font-semibold text-foreground mb-4">
                 At VAWOCO, we transform E-waste into Opportunity.
               </p>
               <p className="text-lg md:text-xl text-muted-foreground max-w-3xl">
-                By collecting, sorting, and refurbishing discarded phones, we create affordable devices, meaningful jobs, and a cleaner planet.
+                By collecting, sorting, and refurbishing discarded phones, we
+                create affordable devices, meaningful jobs, and a cleaner
+                planet.
               </p>
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: "0.4s" }}>
+            <div
+              className="flex flex-col sm:flex-row gap-4 animate-fade-in"
+              style={{ animationDelay: "0.4s" }}
+            >
               <Button
                 asChild
                 size="lg"

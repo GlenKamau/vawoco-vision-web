@@ -26,7 +26,7 @@ const Services = () => {
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-subtle">
+        <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-subtle pt-20">
           {/* Animated Background */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div className="absolute top-20 right-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float"></div>

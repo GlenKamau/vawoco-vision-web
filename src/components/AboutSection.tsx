@@ -22,8 +22,8 @@ const AboutSection = () => {
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 right-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float"></div>
         <div className="absolute bottom-20 left-20 w-80 h-80 bg-secondary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "1s" }}></div>
-        <Sparkles className="absolute top-40 left-1/4 w-8 h-8 text-primary/30 animate-pulse" />
-        <Sparkles className="absolute bottom-40 right-1/3 w-6 h-6 text-secondary/30 animate-pulse" style={{ animationDelay: "0.5s" }} />
+        <Sparkles className="absolute top-40 left-1/4 w-8 h-8 text-primary/100 animate-pulse" />
+        <Sparkles className="absolute bottom-40 right-1/3 w-6 h-6 text-secondary/100 animate-pulse" style={{ animationDelay: "0.5s" }} />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
