@@ -15,4 +15,7 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+
+  // 👇 Add this for GitHub Pages
+  base: "/vawoco-vision-web/", // <-- replace with your actual repository name
 }));
