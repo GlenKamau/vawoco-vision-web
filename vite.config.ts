@@ -14,5 +14,5 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: mode === "production" ? "/vawoco-vision-web/" : "/", // 👈 Only add base on build
+  base: "/", // ✅ Works for both local and Vercel
 }));
