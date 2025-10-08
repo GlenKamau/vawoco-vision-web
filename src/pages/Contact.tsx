@@ -1,19 +1,20 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Mail, Phone, MapPin, Send, MessageSquare, Sparkles, Zap, Star } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Facebook, Instagram, Linkedin, Globe } from "lucide-react";
 import contactHero from "@/assets/contact-hero.jpg";
-import SpinningKeywords from "@/components/SpinningKeywords";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    subject: "",
     message: "",
   });
 
@@ -21,167 +22,86 @@ const Contact = () => {
     e.preventDefault();
     toast({
       title: "Message Sent!",
-      description: "Thank you for reaching out. We'll get back to you soon.",
+      description: "We'll get back to you within 24 hours.",
     });
-    setFormData({ name: "", email: "", message: "" });
+    setFormData({ name: "", email: "", subject: "", message: "" });
   };
 
   const contactInfo = [
     {
+      icon: MapPin,
+      title: "Office Address",
+      value: "VAWOCO Center, Nairobi, Kenya",
+    },
+    {
       icon: Phone,
       title: "Phone",
-      value: "+254 (700) 322-745",
+      value: "+254 700 000 000",
     },
     {
       icon: Mail,
       title: "Email",
-      value: "info@vawoco.org",
+      value: "info@vawoco.com",
     },
     {
-      icon: MapPin,
-      title: "Address",
-      value: "Nairobi,Kenya",
+      icon: Globe,
+      title: "Website",
+      value: "www.vawoco.com",
     },
+  ];
+
+  const socialMedia = [
+    { icon: Facebook, name: "Facebook", handle: "@Vawoco", url: "#" },
+    { icon: Instagram, name: "Instagram", handle: "@Vawoco", url: "#" },
+    { icon: Linkedin, name: "LinkedIn", handle: "Vawoco", url: "#" },
   ];
 
   return (
     <div className="min-h-screen">
       <Header />
       <main className="pt-20">
-        {/* Hero Section with Image & Text */}
+        {/* Hero Section */}
         <section className="py-20 bg-gradient-subtle relative overflow-hidden">
           <div className="absolute top-10 right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float"></div>
           <div className="absolute bottom-10 left-10 w-48 h-48 bg-secondary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "1.5s" }}></div>
           
           <div className="container mx-auto px-4 relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div className="order-2 lg:order-1 animate-scale-in">
-                <div className="relative rounded-2xl overflow-hidden shadow-hover group">
-                  <img src={contactHero} alt="Contact us" className="w-full h-[500px] object-cover group-hover:scale-105 transition-smooth" />
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 group-hover:opacity-75 transition-smooth"></div>
-                </div>
+            <motion.div 
+              className="text-center max-w-4xl mx-auto mb-12"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h1 className="font-display font-bold text-5xl md:text-6xl mb-6 bg-gradient-to-r from-primary via-primary-glow to-accent bg-clip-text text-transparent">
+                Contact VAWOCO Phone Repair
+              </h1>
+              <p className="text-xl text-foreground/70 font-medium mb-8">
+                We'd love to hear from you.
+              </p>
+              
+              <div className="text-lg text-foreground/80 leading-relaxed space-y-4">
+                <p>Have a phone that needs fixing? Want to donate your old device, partner with us, or learn mobile repair?</p>
+                <p className="font-semibold">You're in the right place.</p>
+                <p>At VAWOCO, every message matters — because every connection brings us closer to a sustainable future.</p>
               </div>
-              <div className="order-1 lg:order-2 animate-fade-in">
-                <h1 className="font-display font-bold text-5xl md:text-6xl mb-6">
-                  Let's Start a{" "}
-                  <SpinningKeywords keywords={["Conversation", "Partnership", "Journey", "Connection"]} className="text-5xl md:text-6xl" />
-                </h1>
-                <p className="text-xl text-muted-foreground">Have questions or want to get involved? We'd love to hear from you.</p>
-              </div>
-            </div>
+            </motion.div>
           </div>
         </section>
 
-        {/* Contact Section */}
+        {/* Contact Information & Form Section */}
         <section className="py-20 bg-background relative overflow-hidden">
-          {/* Background Animated Elements */}
           <div className="absolute top-20 right-20 w-40 h-40 bg-primary/5 rounded-full blur-2xl animate-float"></div>
           <div className="absolute bottom-20 left-20 w-32 h-32 bg-secondary/5 rounded-full blur-2xl animate-float" style={{ animationDelay: "1s" }}></div>
-          <div className="absolute top-1/2 right-10 animate-float" style={{ animationDelay: "0.5s" }}>
-            <Mail className="w-16 h-16 text-primary/5" />
-          </div>
           
           <div className="container mx-auto px-4 relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
               {/* Contact Information */}
-              <div className="space-y-8 animate-fade-in">
+              <motion.div 
+                className="space-y-8"
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
                 <div>
-                  <div className="inline-block p-2 bg-primary/10 rounded-xl mb-4 animate-float">
-                    <Phone className="w-6 h-6 text-primary" />
-                  </div>
-                  <h2 className="font-display font-bold text-3xl mb-8">
-                    Contact Information
-                  </h2>
-                  <div className="space-y-6">
-                    {contactInfo.map((info, index) => {
-                      const Icon = info.icon;
-                      return (
-                        <div 
-                          key={index} 
-                          className="flex items-start gap-4 group hover:bg-primary/5 p-4 rounded-xl transition-smooth cursor-pointer"
-                        >
-                          <div className="w-12 h-12 gradient-hero rounded-xl flex items-center justify-center flex-shrink-0 group-hover:shadow-glow transition-smooth group-hover:scale-110">
-                            <Icon className="w-6 h-6 text-primary-foreground" />
-                          </div>
-                          <div>
-                            <h3 className="font-semibold mb-1 group-hover:text-primary transition-smooth">{info.title}</h3>
-                            <p className="text-muted-foreground">{info.value}</p>
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-              </div>
-
-              {/* Contact Form */}
-              <div className="bg-card rounded-2xl p-8 shadow-card animate-scale-in hover:shadow-hover transition-smooth">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="p-2 bg-primary/10 rounded-lg animate-float">
-                    <Send className="w-5 h-5 text-primary" />
-                  </div>
-                  <h2 className="font-display font-bold text-2xl">
-                    Send us a Message
-                  </h2>
-                </div>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="group">
-                    <label htmlFor="name" className="block text-sm font-medium mb-2 group-hover:text-primary transition-smooth">
-                      Name
-                    </label>
-                    <Input
-                      id="name"
-                      value={formData.name}
-                      onChange={(e) =>
-                        setFormData({ ...formData, name: e.target.value })
-                      }
-                      className="transition-smooth focus:shadow-glow"
-                      required
-                    />
-                  </div>
-                  <div className="group">
-                    <label htmlFor="email" className="block text-sm font-medium mb-2 group-hover:text-primary transition-smooth">
-                      Email
-                    </label>
-                    <Input
-                      id="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={(e) =>
-                        setFormData({ ...formData, email: e.target.value })
-                      }
-                      className="transition-smooth focus:shadow-glow"
-                      required
-                    />
-                  </div>
-                  <div className="group">
-                    <label htmlFor="message" className="block text-sm font-medium mb-2 group-hover:text-primary transition-smooth">
-                      Message
-                    </label>
-                    <Textarea
-                      id="message"
-                      value={formData.message}
-                      onChange={(e) =>
-                        setFormData({ ...formData, message: e.target.value })
-                      }
-                      rows={5}
-                      className="transition-smooth focus:shadow-glow"
-                      required
-                    />
-                  </div>
-                  <Button type="submit" className="w-full gradient-hero hover:opacity-90 shadow-glow hover:shadow-hover transition-smooth hover:scale-105 group">
-                    Send Message
-                    <Send className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-smooth" />
-                  </Button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-      <Footer />
-    </div>
-  );
-};
-
-export default Contact;
+                  <div className="flex items-center gap-3 mb-8

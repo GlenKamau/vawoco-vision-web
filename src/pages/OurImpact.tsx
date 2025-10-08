@@ -4,6 +4,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import impactHero from "@/assets/impact-hero.jpg";
+import impactSocial from "@/assets/impact-social.jpg";
+import impactEnvironmental from "@/assets/impact-environmental.jpg";
+import impactEconomic from "@/assets/impact-economic.jpg";
 
 const OurImpact = () => {
   const fadeIn = {
@@ -43,22 +47,39 @@ const OurImpact = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 gradient-hero opacity-10"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div 
-            className="text-center max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-primary-glow to-accent bg-clip-text text-transparent">
-              Our Impact
-            </h1>
-            <p className="text-xl md:text-2xl text-foreground/70 font-medium">
-              Social • Environmental • Economic
-            </p>
-          </motion.div>
+      <section className="relative pt-20 pb-0 overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+            <motion.div 
+              className="order-2 lg:order-1"
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="relative rounded-3xl overflow-hidden shadow-hover group">
+                <img 
+                  src={impactHero} 
+                  alt="VAWOCO Impact - Youth learning phone repair" 
+                  className="w-full h-[500px] lg:h-[600px] object-cover group-hover:scale-105 transition-smooth"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-secondary/30 group-hover:opacity-75 transition-smooth"></div>
+              </div>
+            </motion.div>
+            
+            <motion.div 
+              className="order-1 lg:order-2 text-center lg:text-left"
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-primary-glow to-accent bg-clip-text text-transparent animate-fade-in">
+                Our Impact
+              </h1>
+              <p className="text-xl md:text-2xl text-foreground/70 font-medium animate-fade-in" style={{ animationDelay: "0.2s" }}>
+                Social • Environmental • Economic
+              </p>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -84,19 +105,44 @@ const OurImpact = () => {
       <section className="py-20 bg-gradient-subtle relative overflow-hidden">
         <div className="container mx-auto px-4">
           <motion.div 
-            className="max-w-6xl mx-auto"
+            className="max-w-7xl mx-auto"
             {...fadeIn}
           >
             <div className="flex items-center justify-center gap-4 mb-8">
-              <Users className="w-12 h-12 text-primary" />
+              <Users className="w-12 h-12 text-primary animate-pulse" />
               <h2 className="text-3xl md:text-4xl font-bold">Social Impact</h2>
             </div>
-            <h3 className="text-2xl font-semibold text-center mb-8 text-primary">Empowering People, Restoring Dignity</h3>
+            <h3 className="text-2xl font-semibold text-center mb-12 text-primary">Empowering People, Restoring Dignity</h3>
             
-            <div className="space-y-6 text-lg text-foreground/80 leading-relaxed mb-12">
-              <p>Discarded phones become tools of empowerment in our hands.</p>
-              <p>Through our training programs, unemployed youth learn valuable repair and refurbishment skills that open pathways to stable livelihoods. Many of our trainees go on to start their own small businesses or join the growing circular tech industry.</p>
-              <p>At the same time, vulnerable women and young people earn income by collecting discarded phones from homes, offices, and public spaces. This creates dignified work opportunities for those often excluded from formal employment.</p>
+            <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="order-2 lg:order-1"
+              >
+                <div className="relative rounded-3xl overflow-hidden shadow-hover group">
+                  <img 
+                    src={impactSocial} 
+                    alt="Women empowerment through phone collection" 
+                    className="w-full h-[400px] object-cover group-hover:scale-105 transition-smooth"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent group-hover:opacity-75 transition-smooth"></div>
+                </div>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="order-1 lg:order-2 space-y-6 text-lg text-foreground/80 leading-relaxed"
+              >
+                <p>Discarded phones become tools of empowerment in our hands.</p>
+                <p>Through our training programs, unemployed youth learn valuable repair and refurbishment skills that open pathways to stable livelihoods. Many of our trainees go on to start their own small businesses or join the growing circular tech industry.</p>
+                <p>At the same time, vulnerable women and young people earn income by collecting discarded phones from homes, offices, and public spaces. This creates dignified work opportunities for those often excluded from formal employment.</p>
+              </motion.div>
             </div>
 
             <div className="mb-8">
@@ -112,18 +158,24 @@ const OurImpact = () => {
                   <motion.div
                     key={index}
                     variants={fadeIn}
-                    className="bg-background/50 backdrop-blur-sm p-6 rounded-lg border border-primary/20 hover:border-primary/40 transition-smooth hover:shadow-glow"
+                    className="bg-background/50 backdrop-blur-sm p-6 rounded-lg border border-primary/20 hover:border-primary/40 transition-smooth hover:shadow-glow hover:scale-105 group cursor-pointer"
                   >
-                    <highlight.icon className="w-8 h-8 text-primary mb-4" />
+                    <highlight.icon className="w-8 h-8 text-primary mb-4 group-hover:scale-110 transition-smooth" />
                     <p className="text-foreground/80">{highlight.text}</p>
                   </motion.div>
                 ))}
               </motion.div>
             </div>
 
-            <p className="text-xl font-semibold text-center text-primary">
+            <motion.p 
+              className="text-xl font-semibold text-center text-primary"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
               Empowerment isn't just a word — it's the purpose behind every phone we fix.
-            </p>
+            </motion.p>
           </motion.div>
         </div>
       </section>
@@ -132,19 +184,43 @@ const OurImpact = () => {
       <section className="py-20 relative overflow-hidden">
         <div className="container mx-auto px-4">
           <motion.div 
-            className="max-w-6xl mx-auto"
+            className="max-w-7xl mx-auto"
             {...fadeIn}
           >
             <div className="flex items-center justify-center gap-4 mb-8">
-              <Leaf className="w-12 h-12 text-primary" />
+              <Leaf className="w-12 h-12 text-primary animate-pulse" />
               <h2 className="text-3xl md:text-4xl font-bold">Environmental Impact</h2>
             </div>
-            <h3 className="text-2xl font-semibold text-center mb-8 text-primary">Reducing E-Waste, Restoring the Planet</h3>
+            <h3 className="text-2xl font-semibold text-center mb-12 text-primary">Reducing E-Waste, Restoring the Planet</h3>
             
-            <div className="space-y-6 text-lg text-foreground/80 leading-relaxed mb-12">
-              <p>Electronic waste (e-waste) is one of the fastest-growing pollution threats globally.</p>
-              <p>VAWOCO tackles this challenge head-on by extending the life of phones and responsibly recycling unusable components.</p>
-              <p>Every refurbished device means one less phone polluting landfills, and every part we recycle means fewer raw materials extracted from the Earth.</p>
+            <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="space-y-6 text-lg text-foreground/80 leading-relaxed"
+              >
+                <p>Electronic waste (e-waste) is one of the fastest-growing pollution threats globally.</p>
+                <p>VAWOCO tackles this challenge head-on by extending the life of phones and responsibly recycling unusable components.</p>
+                <p>Every refurbished device means one less phone polluting landfills, and every part we recycle means fewer raw materials extracted from the Earth.</p>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                <div className="relative rounded-3xl overflow-hidden shadow-hover group">
+                  <img 
+                    src={impactEnvironmental} 
+                    alt="Environmental sustainability and e-waste recycling" 
+                    className="w-full h-[400px] object-cover group-hover:scale-105 transition-smooth"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent group-hover:opacity-75 transition-smooth"></div>
+                </div>
+              </motion.div>
             </div>
 
             <div className="mb-8">
@@ -160,19 +236,25 @@ const OurImpact = () => {
                   <motion.div
                     key={index}
                     variants={fadeIn}
-                    className="bg-background/50 backdrop-blur-sm p-6 rounded-lg border border-primary/20 hover:border-primary/40 transition-smooth hover:shadow-glow"
+                    className="bg-background/50 backdrop-blur-sm p-6 rounded-lg border border-primary/20 hover:border-primary/40 transition-smooth hover:shadow-glow hover:scale-105 group cursor-pointer"
                   >
-                    <highlight.icon className="w-8 h-8 text-primary mb-4" />
+                    <highlight.icon className="w-8 h-8 text-primary mb-4 group-hover:scale-110 transition-smooth" />
                     <p className="text-foreground/80">{highlight.text}</p>
                   </motion.div>
                 ))}
               </motion.div>
             </div>
 
-            <div className="text-center">
+            <motion.div 
+              className="text-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
               <p className="text-xl font-semibold text-primary">Our environmental philosophy is simple:</p>
               <p className="text-2xl font-bold mt-2">Reuse first. Repair always. Recycle responsibly.</p>
-            </div>
+            </motion.div>
           </motion.div>
         </div>
       </section>
@@ -181,41 +263,78 @@ const OurImpact = () => {
       <section className="py-20 bg-gradient-subtle relative overflow-hidden">
         <div className="container mx-auto px-4">
           <motion.div 
-            className="max-w-6xl mx-auto"
+            className="max-w-7xl mx-auto"
             {...fadeIn}
           >
             <div className="flex items-center justify-center gap-4 mb-8">
-              <TrendingUp className="w-12 h-12 text-primary" />
+              <TrendingUp className="w-12 h-12 text-primary animate-pulse" />
               <h2 className="text-3xl md:text-4xl font-bold">Economic Impact</h2>
             </div>
-            <h3 className="text-2xl font-semibold text-center mb-8 text-primary">Building a Circular Economy</h3>
+            <h3 className="text-2xl font-semibold text-center mb-12 text-primary">Building a Circular Economy</h3>
             
-            <div className="space-y-6 text-lg text-foreground/80 leading-relaxed mb-8">
-              <p>By combining social purpose with technical skill, VAWOCO creates a self-sustaining circular economy — one that benefits people and the planet.</p>
-              <p>Our repairs and refurbished phone sales generate affordable access to technology for low-income customers, while reinvesting profits into training and community development.</p>
+            <div className="grid lg:grid-cols-2 gap-12 items-center mb-8">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="order-2 lg:order-1"
+              >
+                <div className="relative rounded-3xl overflow-hidden shadow-hover group">
+                  <img 
+                    src={impactEconomic} 
+                    alt="Circular economy and economic growth" 
+                    className="w-full h-[400px] object-cover group-hover:scale-105 transition-smooth"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent group-hover:opacity-75 transition-smooth"></div>
+                </div>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="order-1 lg:order-2 space-y-6 text-lg text-foreground/80 leading-relaxed"
+              >
+                <p>By combining social purpose with technical skill, VAWOCO creates a self-sustaining circular economy — one that benefits people and the planet.</p>
+                <p>Our repairs and refurbished phone sales generate affordable access to technology for low-income customers, while reinvesting profits into training and community development.</p>
+              </motion.div>
             </div>
 
-            <div className="bg-background/50 backdrop-blur-sm p-8 rounded-lg border border-primary/20 mb-8">
+            <motion.div 
+              className="bg-background/50 backdrop-blur-sm p-8 rounded-lg border border-primary/20 mb-8 hover:shadow-glow transition-smooth"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
               <p className="text-lg font-semibold mb-4">Every phone fixed and sold contributes to:</p>
               <ul className="space-y-3 text-foreground/80">
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                <li className="flex items-start gap-3 group">
+                  <CheckCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0 group-hover:scale-110 transition-smooth" />
                   <span>Income generation for collectors, technicians, and trainees</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                <li className="flex items-start gap-3 group">
+                  <CheckCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0 group-hover:scale-110 transition-smooth" />
                   <span>Affordable smartphone access for underserved communities</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                <li className="flex items-start gap-3 group">
+                  <CheckCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0 group-hover:scale-110 transition-smooth" />
                   <span>Local economic activity within the green tech sector</span>
                 </li>
               </ul>
-            </div>
+            </motion.div>
 
-            <p className="text-xl font-semibold text-center text-primary">
+            <motion.p 
+              className="text-xl font-semibold text-center text-primary"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
               Our business model proves that doing good and doing business can go hand in hand.
-            </p>
+            </motion.p>
           </motion.div>
         </div>
       </section>
@@ -296,7 +415,7 @@ const OurImpact = () => {
       </section>
 
       {/* Join Our Impact */}
-      <section className="py-20 relative overflow-hidden">
+      <section className="py-12 relative overflow-hidden">
         <div className="container mx-auto px-4">
           <motion.div 
             className="max-w-4xl mx-auto text-center"
