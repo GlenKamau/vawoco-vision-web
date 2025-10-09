@@ -49,23 +49,6 @@ const ProjectsSection = () => {
 
   return (
     <section className="relative py-32 overflow-hidden">
-      {/* Parallax Background */}
-      <div
-        className="absolute inset-0 bg-fixed"
-        style={{
-          background: `
-            repeating-radial-gradient(circle at 20% 20%, rgba(255,182,193,0.25) 0, rgba(255,182,193,0.25) 2px, transparent 4px),
-            repeating-radial-gradient(circle at 80% 80%, rgba(255,182,193,0.25) 0, rgba(255,182,193,0.25) 2px, transparent 4px),
-            linear-gradient(135deg, #fff 0%, #fff0f5 100%)
-          `,
-          backgroundSize: "200px 200px, 200px 200px, cover",
-          backgroundAttachment: "fixed",
-        }}
-      >
-        {/* Overlay to soften and blend */}
-        <div className="absolute inset-0 bg-white/50"></div>
-      </div>
-
       {/* Content */}
       <div className="relative z-10">
         {/* your section content */}

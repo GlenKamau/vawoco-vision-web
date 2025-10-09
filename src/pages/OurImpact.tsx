@@ -47,7 +47,7 @@ const OurImpact = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-0 overflow-hidden">
+      <section className="pt-40 md:pt-48">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
             <motion.div 
@@ -381,8 +381,8 @@ const OurImpact = () => {
             className="max-w-6xl mx-auto"
             {...fadeIn}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">Impact Summary</h2>
-            <p className="text-xl text-center mb-12 text-white/90">Since founding VAWOCO:</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Impact Summary</h2>
+            <p className="text-xl text-center mb-12">Since founding VAWOCO:</p>
             
             <motion.div 
               className="grid md:grid-cols-4 gap-8"
@@ -395,17 +395,17 @@ const OurImpact = () => {
                 <motion.div
                   key={index}
                   variants={fadeIn}
-                  className="text-center bg-white/10 backdrop-blur-md p-8 rounded-lg border border-white/20 hover:bg-white/20 transition-smooth hover:scale-105"
+                  className="text-center backdrop-blur-md p-8 rounded-lg border hover:black/20 transition-smooth hover:scale-105"
                 >
-                  <stat.icon className="w-12 h-12 text-white mx-auto mb-4" />
-                  <div className="text-4xl font-bold text-white mb-2">{stat.value}</div>
-                  <div className="text-white/90">{stat.label}</div>
+                  <stat.icon className="w-12 h-12 mx-auto mb-4" />
+                  <div className="text-4xl font-bold mb-2">{stat.value}</div>
+                  <div className="">{stat.label}</div>
                 </motion.div>
               ))}
             </motion.div>
             
             <div className="text-center mt-12">
-              <div className="inline-flex items-center gap-2 text-xl font-semibold text-white">
+              <div className="inline-flex items-center gap-2 text-xl font-semibold">
                 <CheckCircle className="w-6 h-6" />
                 <span>Countless lives impacted</span>
               </div>
