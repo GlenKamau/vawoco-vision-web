@@ -54,9 +54,9 @@ const About = () => {
   return (
     <div className="min-h-screen">
       <Header/>
-      <main className="pt-20">
+      <main className="pt-32">
         {/* Hero Section with Image & Text */}
-        <section className="relative pt-20 bg-gradient-subtle overflow-hidden">
+        <section className="relative py-20 bg-gradient-subtle overflow-hidden">
           <div className="absolute top-10 right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float"></div>
           <div className="absolute bottom-10 left-10 w-48 h-48 bg-secondary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "1.5s" }}></div>
           <div className="absolute top-1/4 right-1/4 animate-float" style={{ animationDelay: "0.7s" }}>

@@ -47,7 +47,7 @@ const OurImpact = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-20 pb-0 overflow-hidden">
+      <section className="relative pt-32 pb-0 overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
             <motion.div 
@@ -340,7 +340,7 @@ const OurImpact = () => {
       </section>
 
       {/* Human Stories Section */}
-      <section className="py-20 relative overflow-hidden">
+      <section className="py-16 relative overflow-hidden">
         <div className="container mx-auto px-4">
           <motion.div 
             className="max-w-4xl mx-auto"
@@ -415,7 +415,7 @@ const OurImpact = () => {
       </section>
 
       {/* Join Our Impact */}
-      <section className="py-12 relative overflow-hidden">
+      <section className="py-16 relative overflow-hidden">
         <div className="container mx-auto px-4">
           <motion.div 
             className="max-w-4xl mx-auto text-center"

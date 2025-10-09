@@ -19,14 +19,20 @@ import {
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import CookieConsent from "@/components/CookieConsent";
+import { motion } from "framer-motion";
+import servicesHero from "@/assets/services-hero.jpg";
+import serviceRepair from "@/assets/service-repair.jpg";
+import serviceRefurbished from "@/assets/service-refurbished.jpg";
+import serviceTraining from "@/assets/service-training.jpg";
+import serviceCollection from "@/assets/service-collection.jpg";
 
 const Services = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      <main className="pt-20">
+      <main className="pt-32">
         {/* Hero Section */}
-        <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-subtle pt-20">
+        <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-subtle">
           {/* Animated Background */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div className="absolute top-20 right-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float"></div>
@@ -35,40 +41,63 @@ const Services = () => {
             <Sparkles className="absolute bottom-40 right-1/3 w-6 h-6 text-secondary/30 animate-pulse" style={{ animationDelay: "0.5s" }} />
           </div>
 
-          <div className="container mx-auto px-4 relative z-10 text-center">
-            <div className="max-w-4xl mx-auto">
-              <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in">
-                Repairing phones.{" "}
-                <span className="text-primary">Restoring lives.</span>
-              </h1>
-              
-              <div className="space-y-4 text-lg md:text-xl text-muted-foreground animate-fade-in" style={{ animationDelay: "0.1s" }}>
-                <p className="text-foreground font-semibold">
-                  At VAWOCO, our work goes far beyond fixing devices — we repair communities.
-                </p>
-                <p>
-                  Every service we offer is designed to make technology more sustainable, more affordable, and more empowering.
-                </p>
-                <p className="font-semibold text-foreground">Our model creates a full circle of impact:</p>
-                <ul className="space-y-2 max-w-2xl mx-auto">
-                  <li className="flex items-center justify-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                    <span>We collect discarded phones.</span>
-                  </li>
-                  <li className="flex items-center justify-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                    <span>We repair and refurbish them.</span>
-                  </li>
-                  <li className="flex items-center justify-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                    <span>We sell and service them affordably.</span>
-                  </li>
-                  <li className="flex items-center justify-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                    <span>We train youth and employ women, ensuring the benefits reach everyone.</span>
-                  </li>
-                </ul>
-              </div>
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className="order-2 lg:order-1"
+              >
+                <div className="relative rounded-3xl overflow-hidden shadow-hover group">
+                  <img 
+                    src={servicesHero} 
+                    alt="VAWOCO Services - Phone repair and refurbishment" 
+                    className="w-full h-[400px] lg:h-[500px] object-cover group-hover:scale-105 transition-smooth"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-secondary/30 group-hover:opacity-75 transition-smooth"></div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                className="order-1 lg:order-2 text-center lg:text-left"
+                initial={{ opacity: 0, x: 30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
+                <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                  Repairing phones.{" "}
+                  <span className="text-primary">Restoring lives.</span>
+                </h1>
+                
+                <div className="space-y-4 text-lg text-foreground/80">
+                  <p className="font-semibold text-foreground">
+                    At VAWOCO, our work goes far beyond fixing devices — we repair communities.
+                  </p>
+                  <p>
+                    Every service we offer is designed to make technology more sustainable, more affordable, and more empowering.
+                  </p>
+                  <p className="font-semibold text-foreground">Our model creates a full circle of impact:</p>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                      <span>We collect discarded phones.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                      <span>We repair and refurbish them.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                      <span>We sell and service them affordably.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                      <span>We train youth and employ women, ensuring the benefits reach everyone.</span>
+                    </li>
+                  </ul>
+                </div>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -77,7 +106,13 @@ const Services = () => {
         <section className="relative py-24 overflow-hidden">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-              <div className="order-2 md:order-1 animate-fade-in">
+              <motion.div 
+                className="order-2 md:order-1"
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
                 <div className="flex items-center gap-4 mb-6">
                   <div className="p-4 bg-primary/10 rounded-2xl">
                     <Wrench className="w-10 h-10 text-primary" />
@@ -123,20 +158,35 @@ const Services = () => {
                     Book your repair today
                   </Link>
                 </Button>
-              </div>
+              </motion.div>
               
-              <div className="order-1 md:order-2 animate-fade-in" style={{ animationDelay: "0.1s" }}>
+              <motion.div 
+                className="order-1 md:order-2"
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
                 <div className="relative group">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-3xl blur-2xl group-hover:blur-3xl transition-all"></div>
-                  <div className="relative bg-card/50 backdrop-blur-sm border border-border rounded-3xl p-12 shadow-card hover:shadow-hover transition-all">
-                    <Wrench className="w-32 h-32 text-primary mx-auto mb-6 group-hover:rotate-12 transition-transform" />
-                    <div className="text-center space-y-4">
-                      <p className="text-2xl font-bold">Expert Technicians</p>
-                      <p className="text-muted-foreground">Fast, reliable, and affordable repairs</p>
+                  <div className="relative rounded-3xl overflow-hidden shadow-card hover:shadow-hover transition-all">
+                    <img 
+                      src={serviceRepair} 
+                      alt="Professional phone repair services" 
+                      className="w-full h-[400px] object-cover group-hover:scale-105 transition-smooth"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent flex items-end p-6">
+                      <div className="flex items-center gap-4">
+                        <Wrench className="w-12 h-12 text-primary" />
+                        <div>
+                          <p className="text-xl font-bold text-white">Expert Technicians</p>
+                          <p className="text-white/90">Fast, reliable, and affordable repairs</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -145,20 +195,39 @@ const Services = () => {
         <section className="relative py-24 overflow-hidden bg-gradient-subtle">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-              <div className="animate-fade-in">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
                 <div className="relative group">
                   <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-primary/20 rounded-3xl blur-2xl group-hover:blur-3xl transition-all"></div>
-                  <div className="relative bg-card/50 backdrop-blur-sm border border-border rounded-3xl p-12 shadow-card hover:shadow-hover transition-all">
-                    <Smartphone className="w-32 h-32 text-secondary mx-auto mb-6 group-hover:scale-110 transition-transform" />
-                    <div className="text-center space-y-4">
-                      <p className="text-2xl font-bold">Quality Assured</p>
-                      <p className="text-muted-foreground">Up to 70% less than new devices</p>
+                  <div className="relative rounded-3xl overflow-hidden shadow-card hover:shadow-hover transition-all">
+                    <img 
+                      src={serviceRefurbished} 
+                      alt="Quality refurbished smartphones" 
+                      className="w-full h-[400px] object-cover group-hover:scale-105 transition-smooth"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent flex items-end p-6">
+                      <div className="flex items-center gap-4">
+                        <Smartphone className="w-12 h-12 text-secondary" />
+                        <div>
+                          <p className="text-xl font-bold text-white">Quality Assured</p>
+                          <p className="text-white/90">Up to 70% less than new devices</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
               
-              <div className="animate-fade-in" style={{ animationDelay: "0.1s" }}>
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
                 <div className="flex items-center gap-4 mb-6">
                   <div className="p-4 bg-secondary/10 rounded-2xl">
                     <Smartphone className="w-10 h-10 text-secondary" />
@@ -199,7 +268,7 @@ const Services = () => {
                     Shop refurbished phones
                   </Link>
                 </Button>
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -208,7 +277,13 @@ const Services = () => {
         <section className="relative py-24 overflow-hidden">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-              <div className="order-2 md:order-1 animate-fade-in">
+              <motion.div 
+                className="order-2 md:order-1"
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
                 <div className="flex items-center gap-4 mb-6">
                   <div className="p-4 bg-primary/10 rounded-2xl">
                     <GraduationCap className="w-10 h-10 text-primary" />
@@ -253,20 +328,35 @@ const Services = () => {
                     Join our training program
                   </Link>
                 </Button>
-              </div>
+              </motion.div>
               
-              <div className="order-1 md:order-2 animate-fade-in" style={{ animationDelay: "0.1s" }}>
+              <motion.div 
+                className="order-1 md:order-2"
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
                 <div className="relative group">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-3xl blur-2xl group-hover:blur-3xl transition-all"></div>
-                  <div className="relative bg-card/50 backdrop-blur-sm border border-border rounded-3xl p-12 shadow-card hover:shadow-hover transition-all">
-                    <Users className="w-32 h-32 text-primary mx-auto mb-6 group-hover:scale-110 transition-transform" />
-                    <div className="text-center space-y-4">
-                      <p className="text-2xl font-bold">Empowering Youth</p>
-                      <p className="text-muted-foreground">Building skills for sustainable careers</p>
+                  <div className="relative rounded-3xl overflow-hidden shadow-card hover:shadow-hover transition-all">
+                    <img 
+                      src={serviceTraining} 
+                      alt="Youth empowerment through phone repair training" 
+                      className="w-full h-[400px] object-cover group-hover:scale-105 transition-smooth"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent flex items-end p-6">
+                      <div className="flex items-center gap-4">
+                        <GraduationCap className="w-12 h-12 text-primary" />
+                        <div>
+                          <p className="text-xl font-bold text-white">Empowering Youth</p>
+                          <p className="text-white/90">Building skills for sustainable careers</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -275,20 +365,39 @@ const Services = () => {
         <section className="relative py-24 overflow-hidden bg-gradient-subtle">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-              <div className="animate-fade-in">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
                 <div className="relative group">
                   <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-primary/20 rounded-3xl blur-2xl group-hover:blur-3xl transition-all"></div>
-                  <div className="relative bg-card/50 backdrop-blur-sm border border-border rounded-3xl p-12 shadow-card hover:shadow-hover transition-all">
-                    <Recycle className="w-32 h-32 text-secondary mx-auto mb-6 group-hover:rotate-180 transition-transform duration-700" />
-                    <div className="text-center space-y-4">
-                      <p className="text-2xl font-bold">Circular Economy</p>
-                      <p className="text-muted-foreground">From waste to opportunity</p>
+                  <div className="relative rounded-3xl overflow-hidden shadow-card hover:shadow-hover transition-all">
+                    <img 
+                      src={serviceCollection} 
+                      alt="Phone collection and e-waste recycling" 
+                      className="w-full h-[400px] object-cover group-hover:scale-105 transition-smooth"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent flex items-end p-6">
+                      <div className="flex items-center gap-4">
+                        <Recycle className="w-12 h-12 text-secondary" />
+                        <div>
+                          <p className="text-xl font-bold text-white">Circular Economy</p>
+                          <p className="text-white/90">From waste to opportunity</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
               
-              <div className="animate-fade-in" style={{ animationDelay: "0.1s" }}>
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
                 <div className="flex items-center gap-4 mb-6">
                   <div className="p-4 bg-secondary/10 rounded-2xl">
                     <Recycle className="w-10 h-10 text-secondary" />
@@ -332,7 +441,7 @@ const Services = () => {
                     Donate your old phone
                   </Link>
                 </Button>
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>

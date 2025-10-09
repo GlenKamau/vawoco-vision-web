@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import vawocoLogo from "@/assets/vawoco-logo.png";
+import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -46,7 +47,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-6">
             {navLinks.map((link) => (
               <NavLink
                 key={link.to}
@@ -62,6 +63,7 @@ const Header = () => {
                 <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary transform origin-left transition-smooth scale-x-0 group-hover:scale-x-100"></span>
               </NavLink>
             ))}
+            <ThemeToggle />
             <Button asChild size="sm" className="gradient-hero hover:opacity-90 shadow-glow hover:shadow-hover transition-smooth hover:scale-105">
               <Link to="/contact">Get Involved</Link>
             </Button>
@@ -99,6 +101,9 @@ const Header = () => {
                 {link.label}
               </NavLink>
             ))}
+            <div className="flex items-center justify-center mt-4">
+              <ThemeToggle />
+            </div>
             <Button
               asChild
               size="sm"

@@ -12,7 +12,7 @@ const Blog = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      <main className="pt-20">
+      <main className="pt-32">
         {/* Hero Section with Image & Text */}
         <section className="py-20 bg-gradient-subtle relative overflow-hidden">
           {/* Animated Background Elements */}
