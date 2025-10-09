@@ -340,7 +340,7 @@ const OurImpact = () => {
       </section>
 
       {/* Human Stories Section */}
-      <section className="py-16 relative overflow-hidden">
+      <section className="py-8 relative overflow-hidden">
         <div className="container mx-auto px-4">
           <motion.div 
             className="max-w-4xl mx-auto"
@@ -375,7 +375,7 @@ const OurImpact = () => {
       </section>
 
       {/* Impact Summary */}
-      <section className="py-20 bg-gradient-hero relative overflow-hidden">
+      <section className="py-12 bg-gradient-hero relative overflow-hidden">
         <div className="container mx-auto px-4">
           <motion.div 
             className="max-w-6xl mx-auto"

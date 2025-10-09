@@ -34,10 +34,10 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-background relative overflow-hidden">
+    <section className="py-20 bg-background dark:bg-gradient-to-b dark:from-background dark:to-background/95 relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute top-0 left-0 w-full h-full gradient-radial"></div>
-      <div className="absolute top-20 right-20 w-48 h-48 bg-secondary/10 rounded-full blur-3xl animate-float"></div>
+      <div className="absolute top-0 left-0 w-full h-full gradient-radial dark:opacity-50"></div>
+      <div className="absolute top-20 right-20 w-48 h-48 bg-secondary/10 dark:bg-secondary/20 rounded-full blur-3xl animate-float"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16">

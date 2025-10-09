@@ -30,9 +30,9 @@ const Services = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      <main className="pt-32">
+      <main className="pt-40 md:pt-48">
         {/* Hero Section */}
-        <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-subtle">
+        <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-subtle pt-8">
           {/* Animated Background */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div className="absolute top-20 right-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float"></div>

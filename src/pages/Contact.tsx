@@ -59,9 +59,9 @@ const Contact = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      <main className="pt-32">
+      <main className="pt-40 md:pt-48">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-subtle relative overflow-hidden">
+        <section className="py-12 bg-gradient-subtle relative overflow-hidden">
           <div className="absolute top-10 right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float"></div>
           <div
             className="absolute bottom-10 left-10 w-48 h-48 bg-secondary/10 rounded-full blur-3xl animate-float"
