@@ -162,32 +162,6 @@ const TripleBottomLineSection = () => {
             ))}
           </Tabs>
 
-          {/* Photo Gallery Placeholder */}
-          <motion.div
-            className="mt-16"
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h3 className="font-display text-2xl font-bold text-center mb-8">
-              Impact in <span className="text-primary">Action</span>
-            </h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {[1, 2, 3, 4].map((item) => (
-                <motion.div
-                  key={item}
-                  whileHover={{ scale: 1.05, rotate: 2 }}
-                  className="aspect-square rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-glow flex items-center justify-center cursor-pointer overflow-hidden"
-                >
-                  <div className="text-center p-4">
-                    <p className="text-sm text-muted-foreground">Photo {item}</p>
-                    <p className="text-xs text-muted-foreground/60 mt-1">Upload image here</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
         </motion.div>
       </div>
     </section>

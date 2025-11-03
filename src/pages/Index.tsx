@@ -14,8 +14,8 @@ const Index = () => {
         <Hero />
         <MissionVisionSection />
         <TripleBottomLineSection />
-        <CTASection />
         <BlogSection />
+        <CTASection />
       </main>
       <Footer />
     </div>

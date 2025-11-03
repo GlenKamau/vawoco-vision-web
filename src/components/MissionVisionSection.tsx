@@ -1,6 +1,11 @@
 import { motion } from "framer-motion";
-import { Target, Eye, Heart, Smartphone, Users, Wrench, GraduationCap, Briefcase, TrendingUp } from "lucide-react";
+import { Target, Eye, Heart, Users, TrendingUp, Briefcase } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import serviceAdvocacy from "@/assets/service-advocacy.jpg";
+import serviceCollecting from "@/assets/service-collecting.jpg";
+import serviceRepairing from "@/assets/service-repairing.jpg";
+import serviceTraining from "@/assets/service-training-workshop.jpg";
+import serviceEmployment from "@/assets/service-employment.jpg";
 
 const MissionVisionSection = () => {
   const values = [
@@ -13,23 +18,23 @@ const MissionVisionSection = () => {
 
   const services = [
     {
-      icon: TrendingUp,
+      image: serviceAdvocacy,
       title: "Advocacy on e-waste management",
     },
     {
-      icon: Smartphone,
+      image: serviceCollecting,
       title: "Collecting and sorting damaged and old mobile phones",
     },
     {
-      icon: Wrench,
+      image: serviceRepairing,
       title: "Repairing and refurbishing smartphones",
     },
     {
-      icon: GraduationCap,
+      image: serviceTraining,
       title: "Training youth and women on phone repair",
     },
     {
-      icon: Briefcase,
+      image: serviceEmployment,
       title: "Empowering trained youth and women through employment or helping them establish their own enterprises",
     },
   ];
@@ -144,7 +149,7 @@ const MissionVisionSection = () => {
           </h2>
 
           <motion.div
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={staggerContainer}
             initial="initial"
             whileInView="whileInView"
@@ -153,15 +158,20 @@ const MissionVisionSection = () => {
               <motion.div
                 key={index}
                 variants={fadeIn}
-                whileHover={{ y: -5 }}
+                whileHover={{ y: -8, scale: 1.02 }}
                 className="group"
               >
-                <Card className="h-full bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-glow cursor-pointer">
-                  <CardContent className="p-6">
-                    <div className="mb-4 p-3 bg-primary/10 rounded-xl w-fit group-hover:bg-primary/20 transition-colors group-hover:scale-110 transition-transform">
-                      <service.icon className="w-8 h-8 text-primary" />
-                    </div>
-                    <p className="text-muted-foreground leading-relaxed">
+                <Card className="h-full overflow-hidden bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-glow cursor-pointer">
+                  <div className="relative h-56 overflow-hidden">
+                    <img 
+                      src={service.image} 
+                      alt={service.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-card/90 to-transparent"></div>
+                  </div>
+                  <CardContent className="p-6 -mt-8 relative z-10">
+                    <p className="text-foreground font-semibold leading-relaxed">
                       {service.title}
                     </p>
                   </CardContent>
