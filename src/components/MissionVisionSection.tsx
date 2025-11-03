@@ -143,42 +143,54 @@ const MissionVisionSection = () => {
         </motion.div>
 
         {/* Products & Services */}
-        <motion.div className="max-w-6xl mx-auto" {...fadeIn}>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-center mb-12 animate-fade-in">
+        <motion.div className="max-w-7xl mx-auto" {...fadeIn}>
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-center mb-16 animate-fade-in">
             Our Products & <span className="text-primary">Services</span>
           </h2>
 
-          <motion.div
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="whileInView"
-          >
+          <div className="space-y-20">
             {services.map((service, index) => (
               <motion.div
                 key={index}
                 variants={fadeIn}
-                whileHover={{ y: -8, scale: 1.02 }}
-                className="group"
+                className={`flex flex-col ${
+                  index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                } gap-8 md:gap-12 items-center`}
               >
-                <Card className="h-full overflow-hidden bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-glow cursor-pointer">
-                  <div className="relative h-56 overflow-hidden">
-                    <img 
-                      src={service.image} 
+                {/* Image */}
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  className="w-full md:w-1/2"
+                >
+                  <div className="relative overflow-hidden rounded-2xl shadow-elegant group">
+                    <img
+                      src={service.image}
                       alt={service.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="w-full h-80 md:h-96 object-cover transition-transform duration-700 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-card/90 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   </div>
-                  <CardContent className="p-6 -mt-8 relative z-10">
-                    <p className="text-foreground font-semibold leading-relaxed">
-                      {service.title}
-                    </p>
-                  </CardContent>
-                </Card>
+                </motion.div>
+
+                {/* Content */}
+                <div className="w-full md:w-1/2">
+                  <Card className="bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-glow">
+                    <CardContent className="p-8">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-12 h-1 bg-primary rounded-full"></div>
+                        <span className="text-primary font-semibold text-sm">
+                          {String(index + 1).padStart(2, '0')}
+                        </span>
+                      </div>
+                      <h3 className="font-display text-2xl md:text-3xl font-bold mb-4 leading-tight">
+                        {service.title}
+                      </h3>
+                    </CardContent>
+                  </Card>
+                </div>
               </motion.div>
             ))}
-          </motion.div>
+          </div>
         </motion.div>
       </div>
     </section>
