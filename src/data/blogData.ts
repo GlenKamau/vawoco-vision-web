@@ -11,9 +11,9 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     id: "1",
-    title: "Building Sustainable Communities Through Collaboration",
+    title: "Bridging the Youth Unemploymennt Gap Through Mobile Repair Apprenticeships",
     excerpt:
-      "Discover how collaborative efforts are creating lasting change in communities around the world.",
+      "In Kenya today, thousands of young people remain unemployed despite the country’s rapidly growing mobile phone market.",
     content: `
       <p>Sustainable community development requires more than just good intentions—it demands collaboration, innovation, and a commitment to long-term change. At Vawoco Organization, we've witnessed firsthand how bringing together diverse stakeholders can create transformative outcomes.</p>
       
@@ -32,9 +32,9 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "2",
-    title: "The Impact of Education on Community Development",
+    title: "How the Circular Economy Enhances SMEs’ Business Operations",
     excerpt:
-      "Exploring how education initiatives create ripple effects of positive change throughout entire communities.",
+      "Instead of relying on a linear “take–make–dispose” model, SMEs are now embracing repair, reuse, and recycling — reducing costs and creating new revenue streams.",
     content: `
       <p>Education is often called the great equalizer, and our work with underserved communities has proven this to be true time and again. The Education First initiative has shown us that when you invest in education, you're not just helping individual students—you're transforming entire communities.</p>
       
@@ -53,9 +53,9 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "3",
-    title: "Environmental Sustainability Starts at Home",
+    title: "Women’s Role in Entrepreneurship in Sub-Saharan Africa",
     excerpt:
-      "Learn about practical steps communities can take to embrace environmentally sustainable practices.",
+      "Despite facing barriers such as limited access to finance and training, many women have built thriving businesses in sectors like agriculture",
     content: `
       <p>Climate change and environmental degradation are global challenges, but the solutions often start at the local level. Our Green Initiative has taught us that when communities embrace sustainable practices, the impact can be profound and far-reaching.</p>
       
