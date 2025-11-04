@@ -85,7 +85,7 @@ const Hero = () => {
             <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl mb-6 animate-fade-in leading-tight text-black">
               <TextType
                 text={[
-                  "Giving discarded phones a <span style='color:#9333EA;'>second life</span> — and people a <span style='color:#EC4899;'>first chance</span>.",
+                  "Empowering <span style='color:#9333EA;'>Communities</span> through mobile <span style='color:#EC4899;'> repair </span>.",
                   // "Transforming <span style='color:#9333EA;'>E-waste</span> into <span style='color:#EC4899;'>Opportunity</span>.",
                   // "Empowering <span style='color:#9333EA;'>communities</span> through <span style='color:#EC4899;'>technology</span>.",
                 ]}
@@ -104,12 +104,11 @@ const Hero = () => {
               style={{ animationDelay: "0.2s" }}
             >
               <p className="text-xl md:text-2xl font-semibold text-foreground mb-4">
-                At VAWOCO, we transform E-waste into Opportunity.
+                 VAWOCO is a mobile phone repair social enterprise that turns discarded phones into renewed value.
               </p>
-              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl">
-                By collecting, sorting, and refurbishing discarded phones, we
-                create affordable devices, meaningful jobs, and a cleaner
-                planet.
+              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl"> 
+                Through collection, sorting, repairing and reselling. We reduce e-waste, supports environmental 
+                sustainability, empowers communities through mobile repair training and inclusive job creation.
               </p>
             </div>
 
