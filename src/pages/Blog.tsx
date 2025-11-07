@@ -59,10 +59,10 @@ const Blog = () => {
                     className="text-5xl md:text-6xl"
                   />
                 </h1>
-                <p className="text-xl text-muted-foreground mb-6">
+                <p className="text-xl text-foreground mb-6">
                   Discover insights, updates, and inspiring stories from the frontlines of community transformation.
                 </p>
-                <p className="text-lg text-muted-foreground">
+                <p className="text-lg text-foreground">
                   From environmental sustainability to education and innovation, explore how we're making a difference.
                 </p>
               </div>
@@ -73,7 +73,7 @@ const Blog = () => {
         {/* Subtitle Section */}
         <section className="py-12 bg-background/50 backdrop-blur-sm border-y border-primary/10">
           <div className="container mx-auto px-4 text-center">
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in">
+            <p className="text-lg md:text-xl text-foreground max-w-3xl mx-auto animate-fade-in">
               Join us on our journey as we share real stories, proven solutions, and transformative initiatives 
               that are reshaping communities and building a sustainable future for all.
             </p>

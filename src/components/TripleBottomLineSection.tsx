@@ -90,7 +90,7 @@ const TripleBottomLineSection = () => {
           <h2 className="font-display text-4xl md:text-5xl font-bold text-center mb-4 animate-fade-in">
             Our Triple Bottom Line <span className="text-primary">Impact</span>
           </h2>
-          <p className="text-lg text-center text-muted-foreground mb-12 animate-fade-in">
+          <p className="text-lg text-center text-foreground mb-12 animate-fade-in">
             Transforming lives, protecting the planet, and driving economic growth
           </p>
 
@@ -143,7 +143,7 @@ const TripleBottomLineSection = () => {
                             <div className={`p-3 ${impact.bgColor} rounded-xl group-hover:scale-110 transition-transform`}>
                               <item.icon className={`w-6 h-6 ${impact.color}`} />
                             </div>
-                            <p className="text-muted-foreground leading-relaxed flex-1 pt-2">
+                            <p className="text-foreground leading-relaxed flex-1 pt-2">
                               {item.text}
                             </p>
                           </div>

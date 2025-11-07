@@ -154,7 +154,7 @@ const OurImpact = () => {
               <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary via-primary-glow to-accent bg-clip-text text-transparent">
                 Our Impact
               </h1>
-              <p className="text-lg md:text-xl text-foreground/80 leading-relaxed">
+              <p className="text-lg md:text-xl text-foreground leading-relaxed">
                 In just three years, we have trained over 200 youths, empowering them with hands-on mobile repair and e-waste management skills. Today, over 20 active repair shops are operating successfully across Nairobi, Kiambu, and Nyeri counties, creating jobs, promoting digital access, and advancing environmental sustainability through repair and reuse.
               </p>
             </motion.div>
@@ -189,7 +189,7 @@ const OurImpact = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Impact So Far</h2>
-            <p className="text-xl text-foreground/70">Transforming lives, one phone at a time</p>
+            <p className="text-xl text-foreground">Transforming lives, one phone at a time</p>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -208,7 +208,7 @@ const OurImpact = () => {
                   className="w-full h-64 object-cover group-hover:scale-110 transition-smooth"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent flex items-end p-6">
-                  <div className="text-white">
+                  <div className="text-foreground/80">
                     <div className="text-5xl font-bold mb-2">
                       <AnimatedCounter target={200} />+
                     </div>
@@ -233,7 +233,7 @@ const OurImpact = () => {
                   className="w-full h-64 object-cover group-hover:scale-110 transition-smooth"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent flex items-end p-6">
-                  <div className="text-white">
+                  <div className="text-foreground/80">
                     <div className="text-5xl font-bold mb-2">
                       <AnimatedCounter target={50} />+
                     </div>
@@ -258,7 +258,7 @@ const OurImpact = () => {
                   className="w-full h-64 object-cover group-hover:scale-110 transition-smooth"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent flex items-end p-6">
-                  <div className="text-white">
+                  <div className="text-foreground/80">
                     <div className="text-5xl font-bold mb-2">
                       <AnimatedCounter target={10000} />+
                     </div>

@@ -52,7 +52,7 @@ const CTASection = () => {
               <h2 className="font-display font-bold text-4xl md:text-6xl mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                 Ready to Make a Difference?
               </h2>
-              <p className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed">
+              <p className="text-lg md:text-xl text-foreground mb-10 leading-relaxed">
                 Join us in creating positive change. Whether you want to volunteer,
                 partner with us, or support our initiatives, there are many ways to
                 get involved.

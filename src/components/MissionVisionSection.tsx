@@ -130,7 +130,7 @@ const MissionVisionSection = () => {
                                         </div>
                                         <h3 className="font-display text-2xl font-bold">Our Mission</h3>
                                     </div>
-                                    <p className="text-muted-foreground leading-relaxed">
+                                    <p className="text-foreground leading-relaxed">
                                         To enhance e-waste management through refurbishing and repairing used mobile phones as we empower vulnerable youth and women through improved livelihood.
                                     </p>
                                 </CardContent>
@@ -152,7 +152,7 @@ const MissionVisionSection = () => {
                                         </div>
                                         <h3 className="font-display text-2xl font-bold">Our Vision</h3>
                                     </div>
-                                    <p className="text-muted-foreground leading-relaxed">
+                                    <p className="text-foreground leading-relaxed">
                                         To create a world where every discarded phone finds new purpose through circular innovation and green livelihoods.
                                     </p>
                                 </CardContent>
@@ -230,7 +230,7 @@ const MissionVisionSection = () => {
                                         <h3 className="font-display text-2xl md:text-3xl font-bold mb-4 leading-tight">
                                             {currentService.title}
                                         </h3>
-                                        <p className="text-muted-foreground leading-relaxed">
+                                        <p className="text-foreground leading-relaxed">
                                             {currentService.description}
                                         </p>
                                     </div>

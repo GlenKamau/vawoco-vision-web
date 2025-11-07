@@ -106,7 +106,7 @@ const Hero = () => {
               <p className="text-xl md:text-2xl font-semibold text-foreground mb-4">
                  VAWOCO is a mobile phone repair social enterprise that turns discarded phones into renewed value.
               </p>
-              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl"> 
+              <p className="text-lg md:text-xl text-foreground max-w-3xl"> 
                 Through collection, sorting, repairing and reselling. We reduce e-waste, supports environmental 
                 sustainability, empowers communities through mobile repair training and inclusive job creation.
               </p>

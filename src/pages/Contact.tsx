@@ -36,7 +36,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      value: "+254 700 000 000",
+      value: "+254 768633482",
     },
     {
       icon: Mail,
@@ -46,7 +46,7 @@ const Contact = () => {
     {
       icon: Globe,
       title: "Website",
-      value: "www.vawoco.com",
+      value: "www.vawoco.org",
     },
   ];
 
@@ -95,11 +95,11 @@ const Contact = () => {
                 <h1 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl mb-6 bg-gradient-to-r from-primary via-primary-glow to-accent bg-clip-text text-transparent">
                   Contact VAWOCO Phone Repair
                 </h1>
-                <p className="text-xl text-foreground/70 font-medium mb-8">
+                <p className="text-xl text-foreground font-medium mb-8">
                   We'd love to hear from you.
                 </p>
 
-                <div className="text-lg text-foreground/80 leading-relaxed space-y-4">
+                <div className="text-lg text-foreground leading-relaxed space-y-4">
                   <p>
                     Have a phone that needs fixing? Want to donate your old device,
                     partner with us, or learn mobile repair?

@@ -76,7 +76,7 @@ const About = () => {
                   Empowering Communities Through{" "}
                   <SpinningKeywords keywords={["Innovation", "Collaboration", "Sustainability", "Excellence"]} className="text-5xl md:text-6xl" />
                 </h1>
-                <p className="text-xl text-muted-foreground">We are a community-focused organization dedicated to creating meaningful, lasting change through innovative programs and collaborative partnerships.</p>
+                <p className="text-xl text-foreground">We are a community-focused organization dedicated to creating meaningful, lasting change through innovative programs and collaborative partnerships.</p>
               </div>
             </div>
           </div>
@@ -104,21 +104,21 @@ const About = () => {
 
             {/* Content Section */}
             <div className="max-w-5xl mx-auto space-y-6 text-justify">
-              <p className="text-muted-foreground">
+              <p className="text-foreground">
                 Founded in 2015, Vawoco Organization began with a simple but powerful
                 idea: that communities thrive when they have access to the right
                 resources, support, and opportunities. What started as a small
                 grassroots initiative has grown into a comprehensive organization
                 serving thousands of people across multiple programs.
               </p>
-              <p className="text-muted-foreground">
+              <p className="text-foreground">
                 Our journey has been marked by a commitment to listening to community
                 needs, adapting our approaches based on feedback and outcomes, and
                 always putting the people we serve at the center of everything we do.
                 We believe in empowering communities to lead their own transformations,
                 providing the tools and support needed for sustainable change.
               </p>
-              <p className="text-muted-foreground">
+              <p className="text-foreground">
                 Today, Vawoco operates four major program areas—environmental
                 sustainability, education, community care, and innovation—each designed
                 to address critical needs and create pathways to prosperity. Our
@@ -126,7 +126,7 @@ const About = () => {
                 that lasting change requires addressing multiple dimensions of
                 community wellbeing simultaneously.
               </p>
-              <p className="text-muted-foreground">
+              <p className="text-foreground">
                 But our work is far from done. With climate change accelerating,
                 educational disparities persisting, and economic inequality growing,
                 the need for dedicated, community-focused organizations has never been
@@ -169,8 +169,7 @@ const About = () => {
         </section>
 
         {/* Team Section */}
-        <section className="py-20 bg-background relative overflow-hidden">
-          {/* Animated Icons */}
+        {/* <section className="py-20 bg-background relative overflow-hidden">
           <div className="absolute top-10 left-10 animate-float">
             <Users className="w-12 h-12 text-primary/10" />
           </div>
@@ -206,7 +205,9 @@ const About = () => {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
+
+        
       </main>
       <Footer />
     </div>

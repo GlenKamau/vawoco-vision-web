@@ -111,10 +111,10 @@ const Services = () => {
                   <p className="text-xl font-semibold text-foreground">
                     At VAWOCO, we create a complete circular economy for mobile devices — from collection to empowerment.
                   </p>
-                  <p>
+                  <p className="text-medium text-foreground">
                     Our comprehensive services transform e-waste into opportunities, provide affordable technology access, and empower communities through skills training and employment.
                   </p>
-                  <p>
+                  <p className="text-foreground">
                     Every service we offer contributes to environmental sustainability, economic growth, and social impact — creating a better future for all.
                   </p>
                 </div>
@@ -180,8 +180,8 @@ const Services = () => {
                                 <Icon className={`w-12 h-12 text-${service.color}`} />
                               </div>
                               <div>
-                                <p className="text-2xl font-bold text-white">{service.title}</p>
-                                <p className="text-white/90">Transforming e-waste into opportunity</p>
+                                <p className="text-2xl font-bold text-foreground/90">{service.title}</p>
+                                <p className="text-foreground/90">Transforming e-waste into opportunity</p>
                               </div>
                             </div>
                           </div>
@@ -206,11 +206,11 @@ const Services = () => {
                         </h2>
                       </div>
                       
-                      <p className="text-lg text-foreground font-semibold mb-4">
+                      <p className="text-lg text-foreground font-semibold mb-4  ">
                         {service.description}
                       </p>
                       
-                      <p className="text-muted-foreground mb-8 leading-relaxed">
+                      <p className="text-medium text-foreground mb-8 leading-relaxed">
                         {service.details}
                       </p>
 

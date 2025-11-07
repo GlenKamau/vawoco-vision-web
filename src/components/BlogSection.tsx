@@ -20,7 +20,7 @@ const BlogSection = () => {
           <h2 className="font-display font-bold text-4xl md:text-5xl mb-6 animate-fade-in">
             Latest Insights
           </h2>
-          <p className="text-lg text-muted-foreground animate-fade-in">
+          <p className="text-lg text-foreground animate-fade-in">
             Stay updated with our latest stories, news, and insights from the field.
           </p>
         </div>
@@ -54,7 +54,7 @@ const BlogSection = () => {
                   <h3 className="font-display font-semibold text-xl mb-2 group-hover:text-primary transition-smooth">
                     {post.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
+                  <p className="text-sm text-foreground mb-4 line-clamp-2">
                     {post.excerpt}
                   </p>
                   <span className="text-sm font-medium text-primary flex items-center gap-1 group-hover:gap-2 transition-smooth">
