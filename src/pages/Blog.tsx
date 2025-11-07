@@ -1,6 +1,8 @@
+import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
+import TagSelection from "@/components/TagSelection";
 import { blogPosts } from "@/data/blogData";
 import { Link } from "react-router-dom";
 import { ArrowRight, BookOpen, Sparkles, TrendingUp, Zap, Star } from "lucide-react";
@@ -9,6 +11,21 @@ import blogHero from "@/assets/blog-hero.jpg";
 import SpinningKeywords from "@/components/SpinningKeywords";
 
 const Blog = () => {
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+
+  const handleTagToggle = (tag: string) => {
+    setSelectedTags((prev) =>
+      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
+    );
+  };
+
+  const filteredPosts =
+    selectedTags.length === 0
+      ? blogPosts
+      : blogPosts.filter((post) =>
+          selectedTags.some((tag) => post.tags.includes(tag))
+        );
+
   return (
     <div className="min-h-screen">
       <Header />
@@ -97,7 +114,7 @@ const Blog = () => {
           
           <div className="container mx-auto px-4 relative z-10">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {blogPosts.map((post, index) => (
+              {filteredPosts.map((post, index) => (
                 <article
                   key={post.id}
                   className="bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-hover transition-smooth animate-scale-in group"
@@ -136,6 +153,9 @@ const Blog = () => {
             </div>
           </div>
         </section>
+
+        {/* Tag Selection */}
+        <TagSelection selectedTags={selectedTags} onTagToggle={handleTagToggle} />
       </main>
       <Footer />
       <CookieConsent />

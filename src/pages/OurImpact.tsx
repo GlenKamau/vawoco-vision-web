@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Sparkles, Star, Heart } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -140,9 +140,25 @@ const OurImpact = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section */}
-      <section className="pt-40 md:pt-48 pb-20">
-        <div className="container mx-auto px-4">
+      {/* Hero Section with Animated Background */}
+      <section className="pt-40 md:pt-48 pb-20 relative overflow-hidden">
+        {/* Animated Background Elements - Same as other heroes */}
+        <div className="absolute top-10 left-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-10 right-10 w-48 h-48 bg-secondary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "1s" }}></div>
+        <div className="absolute top-1/4 left-1/4 animate-float" style={{ animationDelay: "0.5s" }}>
+          <Sparkles className="w-16 h-16 text-primary/10" />
+        </div>
+        <div className="absolute bottom-1/4 right-1/3 animate-float" style={{ animationDelay: "1.5s" }}>
+          <Star className="w-12 h-12 text-secondary/10" />
+        </div>
+        <div className="absolute top-1/3 right-1/4 animate-float" style={{ animationDelay: "0.7s" }}>
+          <Heart className="w-14 h-14 text-primary/8" />
+        </div>
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent)]"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
             {/* Left Side - Text */}
             <motion.div

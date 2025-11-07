@@ -6,7 +6,23 @@ export interface BlogPost {
   author: string;
   date: string;
   category: string;
+  tags: string[];
 }
+
+export const allTags = [
+  "Youth Empowerment",
+  "Circular Economy",
+  "E-Waste Management",
+  "Skills Training",
+  "Women in Business",
+  "Sustainability",
+  "Green Jobs",
+  "Mobile Repair",
+  "Social Enterprise",
+  "Community Development",
+  "Entrepreneurship",
+  "Environmental Impact",
+];
 
 export const blogPosts: BlogPost[] = [
   {
@@ -58,6 +74,7 @@ export const blogPosts: BlogPost[] = [
     author: "",
     date: "November 1, 2025",
     category: "Community",
+    tags: ["Youth Empowerment", "Mobile Repair", "Skills Training", "Green Jobs"],
   },
 
   {
@@ -138,6 +155,7 @@ export const blogPosts: BlogPost[] = [
     author: "",
     date: "November 1, 2025",
     category: "Education",
+    tags: ["Circular Economy", "E-Waste Management", "Sustainability", "Social Enterprise"],
   },
 
   {
@@ -232,6 +250,7 @@ export const blogPosts: BlogPost[] = [
     author: "",
     date: "November 1, 2025",
     category: "Environment",
+    tags: ["Skills Training", "Youth Empowerment", "Community Development", "Entrepreneurship"],
   },
 
 
@@ -342,5 +361,6 @@ export const blogPosts: BlogPost[] = [
     author: "",
     date: "November 1, 2025",
     category: "Innovation",
+    tags: ["Women in Business", "Entrepreneurship", "Community Development", "Social Enterprise"],
   },
 ];

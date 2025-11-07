@@ -2,7 +2,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
@@ -12,8 +13,20 @@ import ProjectDetail from "./pages/ProjectDetail";
 import Services from "./pages/Services";
 import OurImpact from "./pages/OurImpact";
 import NotFound from "./pages/NotFound";
+import FloatingSocialIcons from "./components/FloatingSocialIcons";
+import FloatingAccessibility from "./components/FloatingAccessibility";
 
 const queryClient = new QueryClient();
+
+const ScrollToTop = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, [location.pathname]);
+
+  return null;
+};
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -21,6 +34,9 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
+        <FloatingSocialIcons />
+        <FloatingAccessibility />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
