@@ -1,4 +1,4 @@
-import { Settings, Moon, Sun } from "lucide-react";
+import { Accessibility, Moon, Sun } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const FloatingAccessibility = () => {
@@ -34,7 +34,7 @@ const FloatingAccessibility = () => {
           tabIndex={0}
           onClick={() => setShowMenu(!showMenu)}
         >
-          <Settings className="w-5 h-5" />
+          <Accessibility className="w-5 h-5" />
         </button>
 
         {showMenu && (
