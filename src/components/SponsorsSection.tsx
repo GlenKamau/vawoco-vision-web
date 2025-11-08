@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
 import { Heart, TrendingUp, Users } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import catalystLogo from "@/assets/catalyst-logo.png";
+import adelphiLogo from "@/assets/adelphi-logo.png";
+import ikeaLogo from "@/assets/ikea-logo.png";
 
 const SponsorsSection = () => {
   const fadeIn = {
@@ -65,16 +68,40 @@ const SponsorsSection = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative group"
+              className="flex flex-col gap-8 items-center"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300" />
-              <div className="relative bg-card/90 backdrop-blur-sm border border-border/50 rounded-2xl p-2 overflow-hidden">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="w-full max-w-xs p-6 bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl transition-all duration-300 hover:shadow-lg"
+              >
                 <img
-                  src="/placeholder.svg"
-                  alt="Partnership Support"
-                  className="w-full h-full object-cover rounded-xl"
+                  src={catalystLogo}
+                  alt="Circular Economy Catalyst"
+                  className="w-full h-auto object-contain"
                 />
-              </div>
+              </motion.div>
+              
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="w-full max-w-xs p-6 bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl transition-all duration-300 hover:shadow-lg"
+              >
+                <img
+                  src={adelphiLogo}
+                  alt="Adelphi Research"
+                  className="w-full h-auto object-contain"
+                />
+              </motion.div>
+
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="w-full max-w-xs p-6 bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl transition-all duration-300 hover:shadow-lg"
+              >
+                <img
+                  src={ikeaLogo}
+                  alt="IKEA Foundation"
+                  className="w-full h-auto object-contain"
+                />
+              </motion.div>
             </motion.div>
           </div>
 
