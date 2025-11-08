@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 // Import images
-import heroTraining from "@/assets/our-impact-hero.png";
+import heroTraining from "@/assets/humble-beginings.jpg";
 import statTraining from "@/assets/impact-training.png";
 import statBusinesses from "@/assets/impact-buisness.png";
 import statPhones from "@/assets/impact-phones.png";

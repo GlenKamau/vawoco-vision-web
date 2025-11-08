@@ -13,7 +13,7 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 import heroEwaste from "@/assets/hero-ewaste.png";
 import heroRecycling from "@/assets/hero-recycling.png";
-import heroPhoneRepair from "@/assets/hero-phone-repair.png";
+import heroPhoneRepair from "@/assets/hero-phone-repair.jpg";
 
 // 👇 Import the TextType component
 import TextType from "@/components/TextType"; // Adjust path based on your file structure

@@ -2,11 +2,7 @@ import { Facebook, Twitter, Instagram, Linkedin, Youtube } from "lucide-react";
 
 const FloatingSocialIcons = () => {
   const socialLinks = [
-    { icon: Facebook, href: "https://facebook.com", label: "Facebook", color: "hsl(221, 88%, 54%)" },
-    { icon: Twitter, href: "https://twitter.com", label: "Twitter", color: "hsl(203, 89%, 53%)" },
-    { icon: Instagram, href: "https://instagram.com", label: "Instagram", color: "hsl(329, 70%, 58%)" },
-    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn", color: "hsl(201, 100%, 35%)" },
-    { icon: Youtube, href: "https://youtube.com", label: "YouTube", color: "hsl(0, 100%, 50%)" },
+
   ];
 
   return (

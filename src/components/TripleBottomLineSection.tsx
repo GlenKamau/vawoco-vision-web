@@ -16,16 +16,16 @@ const TripleBottomLineSection = () => {
       items: [
         {
           icon: Briefcase,
-          text: "Creating employment opportunities for youth and women in phone repair and collection of used devices.",
+          text: "Empowering youth and women through skills, jobs, and entrepreneurship.",
         },
-        {
-          icon: TrendingUp,
-          text: "Supporting small repair and collection enterprises started by our trained beneficiaries.",
-        },
-        {
-          icon: GraduationCap,
-          text: "Offering hands-on training in phone collection, sorting, and repair to empower vulnerable groups.",
-        },
+        // {
+        //   icon: TrendingUp,
+        //   text: "Supporting small repair and collection enterprises started by our trained beneficiaries.",
+        // },
+        // {
+        //   icon: GraduationCap,
+        //   text: "Offering hands-on training in phone collection, sorting, and repair to empower vulnerable groups.",
+        // },
       ],
     },
     environmental: {
@@ -35,17 +35,17 @@ const TripleBottomLineSection = () => {
       hoverColor: "hover:border-green-500/50",
       items: [
         {
-          icon: Phone,
-          text: "Promoting safe collection and sorting of used and discarded phones.",
-        },
-        {
           icon: Recycle,
-          text: "Repairing and refurbishing phones to extend their lifespan and reduce e-waste.",
+          text: "Reducing e-waste and carbon emissions through repair, reuse, and recycling.",
         },
-        {
-          icon: Shield,
-          text: "Raising awareness on responsible e-waste management and proper disposal of old devices.",
-        },
+        // {
+        //   icon: Recycle,
+        //   text: "Repairing and refurbishing phones to extend their lifespan and reduce e-waste.",
+        // },
+        // {
+        //   icon: Shield,
+        //   text: "Raising awareness on responsible e-waste management and proper disposal of old devices.",
+        // },
       ],
     },
     economic: {
@@ -56,12 +56,12 @@ const TripleBottomLineSection = () => {
       items: [
         {
           icon: DollarSign,
-          text: "Enhancing the livelihoods of youth and women through sustainable income opportunities.",
+          text: "Creating sustainable livelihoods and circular business opportunities that keep value within communities.",
         },
-        {
-          icon: Briefcase,
-          text: "Enabling self-employment among trained participants who start their own phone repair or collection ventures.",
-        },
+        // {
+        //   icon: Briefcase,
+        //   text: "Enabling self-employment among trained participants who start their own phone repair or collection ventures.",
+        // },
       ],
     },
   };
@@ -91,7 +91,7 @@ const TripleBottomLineSection = () => {
             Our Triple Bottom Line <span className="text-primary">Impact</span>
           </h2>
           <p className="text-lg text-center text-foreground mb-12 animate-fade-in">
-            Transforming lives, protecting the planet, and driving economic growth
+           Delivers impact across three pillars:
           </p>
 
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
@@ -101,24 +101,24 @@ const TripleBottomLineSection = () => {
                 className="data-[state=active]:bg-blue-500/20 data-[state=active]:text-blue-500 py-4 flex items-center gap-2 transition-all"
               >
                 <Users className="w-5 h-5" />
-                <span className="hidden sm:inline">Social Impact</span>
-                <span className="sm:hidden">Social</span>
+                <span className="hidden sm:inline">People</span>
+                <span className="sm:hidden">People</span>
               </TabsTrigger>
               <TabsTrigger
                 value="environmental"
                 className="data-[state=active]:bg-green-500/20 data-[state=active]:text-green-500 py-4 flex items-center gap-2 transition-all"
               >
                 <Leaf className="w-5 h-5" />
-                <span className="hidden sm:inline">Environmental</span>
-                <span className="sm:hidden">Environ.</span>
+                <span className="hidden sm:inline">Planet</span>
+                <span className="sm:hidden">Planet</span>
               </TabsTrigger>
               <TabsTrigger
                 value="economic"
                 className="data-[state=active]:bg-amber-500/20 data-[state=active]:text-amber-500 py-4 flex items-center gap-2 transition-all"
               >
                 <TrendingUp className="w-5 h-5" />
-                <span className="hidden sm:inline">Economic Impact</span>
-                <span className="sm:hidden">Economic</span>
+                <span className="hidden sm:inline">Profit</span>
+                <span className="sm:hidden">Profit</span>
               </TabsTrigger>
             </TabsList>
 
