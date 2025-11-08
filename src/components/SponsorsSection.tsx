@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Heart, TrendingUp, Users } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import catalystLogo from "@/assets/catalyst-logo.png";
-import adelphiLogo from "@/assets/adelphi-logo.png";
+import adelphiLogo from "@/assets/adelphi-research-logo.png";
 import ikeaLogo from "@/assets/ikea-logo.png";
 
 const SponsorsSection = () => {
