@@ -7,16 +7,16 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 // Import images
-import heroTraining from "@/assets/impact-hero-training.jpg";
-import statTraining from "@/assets/stat-training.jpg";
-import statBusinesses from "@/assets/stat-businesses.jpg";
-import statPhones from "@/assets/stat-phones.jpg";
+import heroTraining from "@/assets/our-impact-hero.png";
+import statTraining from "@/assets/impact-training.png";
+import statBusinesses from "@/assets/impact-buisness.png";
+import statPhones from "@/assets/impact-phones.png";
 import dividerCharacter from "@/assets/divider-character.png";
-import carouselHumble from "@/assets/carousel-humble.jpg";
-import carouselFunding from "@/assets/carousel-funding.jpg";
-import carouselGrowth from "@/assets/carousel-growth.jpg";
-import carouselApprentice from "@/assets/carousel-apprentice.jpg";
-import fundingSupport from "@/assets/funding-support.jpg";
+import carouselHumble from "@/assets/humble-beginings.png";
+import carouselFunding from "@/assets/capacity-building.png";
+import carouselGrowth from "@/assets/growth-satisfaction.png";
+import carouselApprentice from "@/assets/buisness-model.png";
+import fundingSupport from "@/assets/funding and support.png";
 import ctaCharacter from "@/assets/cta-impact-character.png";
 
 // Animated Counter Component

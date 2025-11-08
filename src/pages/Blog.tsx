@@ -7,7 +7,7 @@ import { blogPosts } from "@/data/blogData";
 import { Link } from "react-router-dom";
 import { ArrowRight, BookOpen, Sparkles, TrendingUp, Zap, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import blogHero from "@/assets/blog-hero.jpg";
+import blogHero from "@/assets/blog-hero.png";
 import SpinningKeywords from "@/components/SpinningKeywords";
 
 const Blog = () => {
@@ -120,12 +120,17 @@ const Blog = () => {
                   className="bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-hover transition-smooth animate-scale-in group"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className="h-48 gradient-hero group-hover:shadow-glow transition-smooth relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent group-hover:from-white/20 transition-smooth"></div>
-                    <div className="absolute bottom-4 right-4 animate-float">
-                      <Sparkles className="w-6 h-6 text-white/50" />
-                    </div>
+                <div className="h-48 relative overflow-hidden group">
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-smooth"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent group-hover:from-black/50 transition-smooth"></div>
+                  <div className="absolute bottom-4 right-4 animate-float">
+                    <Sparkles className="w-6 h-6 text-white/80" />
                   </div>
+                </div>
                   <div className="p-6">
                     <div className="flex items-center gap-4 mb-4">
                       <span className="text-xs font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full group-hover:bg-primary/20 transition-smooth">

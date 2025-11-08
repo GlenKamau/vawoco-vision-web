@@ -11,9 +11,9 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import heroEwaste from "@/assets/hero-ewaste.jpg";
-import heroRecycling from "@/assets/hero-recycling.jpg";
-import heroPhoneRepair from "@/assets/hero-phone-repair.jpg";
+import heroEwaste from "@/assets/hero-ewaste.png";
+import heroRecycling from "@/assets/hero-recycling.png";
+import heroPhoneRepair from "@/assets/hero-phone-repair.png";
 
 // 👇 Import the TextType component
 import TextType from "@/components/TextType"; // Adjust path based on your file structure
@@ -49,7 +49,7 @@ const Hero = () => {
                   alt={`VAWOCO E-waste management ${index + 1}`}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/50"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-background/50 to-transparent"></div>
               </div>
             </CarouselItem>
           ))}

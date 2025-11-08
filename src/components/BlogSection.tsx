@@ -34,8 +34,12 @@ const BlogSection = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-hover transition-smooth hover:scale-105">
-                <div className="aspect-video bg-gradient-hero relative overflow-hidden">
-                  <div className="absolute inset-0 bg-primary/20 group-hover:scale-110 transition-smooth"></div>
+                <div className="aspect-video relative overflow-hidden">
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-smooth"
+                  />
                   <div className="absolute top-4 right-4 p-2 bg-primary rounded-lg shadow-glow animate-float">
                     <BookOpen className="w-5 h-5 text-primary-foreground" />
                   </div>

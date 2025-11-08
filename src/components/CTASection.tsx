@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import ctaCharacter from "@/assets/cta-character.png";
+import CTAimage from "@/assets/CTAimage.png";
 
 const CTASection = () => {
   return (
@@ -30,7 +30,7 @@ const CTASection = () => {
                 className="relative"
               >
                 <img 
-                  src={ctaCharacter} 
+                  src={CTAimage} 
                   alt="Join us" 
                   className="w-full max-w-md mx-auto drop-shadow-2xl"
                 />

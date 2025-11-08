@@ -14,13 +14,13 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import CookieConsent from "@/components/CookieConsent";
 import { motion } from "framer-motion";
-import heroAnimation from "@/assets/hero-services-animation.jpg";
-import serviceCollecting from "@/assets/service-collecting-new.jpg";
-import serviceSorting from "@/assets/service-sorting.jpg";
-import serviceRepairing from "@/assets/service-repairing-new.jpg";
-import serviceReselling from "@/assets/service-reselling.jpg";
-import serviceTraining from "@/assets/service-training-new.jpg";
-import serviceSolution from "@/assets/service-solution.jpg";
+import heroAnimation from "@/assets/service-hero.png";
+import serviceCollecting from "@/assets/service-collecting .png";
+import serviceSorting from "@/assets/service-sorting.png";
+import serviceRepairing from "@/assets/service-repairing (2).png";
+import serviceReselling from "@/assets/service-reselling.png";
+import serviceTraining from "@/assets/service-training.png";
+import serviceSolution from "@/assets/service-solution.png";
 
 const Services = () => {
   const services = [

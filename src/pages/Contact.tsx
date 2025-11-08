@@ -1,13 +1,14 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Mail, Phone, MapPin, Send, Facebook, Instagram, Linkedin, Globe } from "lucide-react";
-import contactHero from "@/assets/contact-hero.jpg";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import contactHero from "@/assets/contact-hero.png";
+
 
 const Contact = () => {
   const { toast } = useToast();
@@ -244,7 +245,7 @@ const Contact = () => {
                     <Send className="w-4 h-4" />
                     Send Message
                   </Button>
-                  <p className="text-sm text-center text-foreground/60 mt-4">
+                  <p className="text-sm text-center text-foreground mt-4">
                     💬 We'll get back to you within 24 hours.
                   </p>
                 </form>

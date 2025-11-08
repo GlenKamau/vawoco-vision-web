@@ -1,3 +1,8 @@
+import blog1 from "../assets/blog/blog1.png";
+import blog2 from "../assets/blog/blog2.png";
+import blog3 from "../assets/blog/blog3.png";
+import blog4 from "../assets/blog/blog4.png";
+
 export interface BlogPost {
   id: string;
   title: string;
@@ -7,6 +12,7 @@ export interface BlogPost {
   date: string;
   category: string;
   tags: string[];
+  image : string;
 }
 
 export const allTags = [
@@ -75,6 +81,7 @@ export const blogPosts: BlogPost[] = [
     date: "November 1, 2025",
     category: "Community",
     tags: ["Youth Empowerment", "Mobile Repair", "Skills Training", "Green Jobs"],
+    image: blog1,
   },
 
   {
@@ -156,6 +163,7 @@ export const blogPosts: BlogPost[] = [
     date: "November 1, 2025",
     category: "Education",
     tags: ["Circular Economy", "E-Waste Management", "Sustainability", "Social Enterprise"],
+    image: blog2,
   },
 
   {
@@ -251,6 +259,7 @@ export const blogPosts: BlogPost[] = [
     date: "November 1, 2025",
     category: "Environment",
     tags: ["Skills Training", "Youth Empowerment", "Community Development", "Entrepreneurship"],
+    image: blog3,
   },
 
 
@@ -348,19 +357,11 @@ export const blogPosts: BlogPost[] = [
       When women rise, entire communities thrive — and Africa moves one step closer to achieving its vision of shared prosperity.
       </p>
 
-
-
-
-
-
-
-      
-      
-    
     `,
     author: "",
     date: "November 1, 2025",
     category: "Innovation",
     tags: ["Women in Business", "Entrepreneurship", "Community Development", "Social Enterprise"],
+    image: blog4,
   },
 ];

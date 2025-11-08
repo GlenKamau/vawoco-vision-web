@@ -2,11 +2,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import React, { useState, useEffect } from "react"; 
 import { Target, Eye, Heart, Users, TrendingUp, Briefcase, ChevronLeft, ChevronRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import serviceAdvocacy from "@/assets/service-advocacy.jpg";
-import serviceCollecting from "@/assets/service-collecting.jpg";
-import serviceRepairing from "@/assets/service-repairing.jpg";
-import serviceTraining from "@/assets/service-training-workshop.jpg";
-import serviceEmployment from "@/assets/service-employment.jpg";
+import serviceAdvocacy from "@/assets/service-advocacy.png";
+import serviceCollecting from "@/assets/service-collecting.png";
+import serviceRepairing from "@/assets/service-repairing.png";
+import serviceTraining from "@/assets/service-training.png";
+import serviceEmployment from "@/assets/service-employment.png";
 
 // Type Definition for clarity
 interface Service {

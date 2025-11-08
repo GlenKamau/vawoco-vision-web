@@ -113,7 +113,14 @@ const BlogDetail = () => {
         <section className="bg-background">
           <div className="container mx-auto px-4 py-8">
             <div className="max-w-6xl mx-auto">
-              <div className="aspect-video gradient-hero rounded-2xl"></div>
+            <div className="aspect-video rounded-2xl overflow-hidden shadow-md">
+              <img
+                src={post.image}  
+                alt={post.title}
+                className="w-full h-full object-cover"
+              />
+            </div>
+
             </div>
           </div>
         </section>
@@ -151,7 +158,13 @@ const BlogDetail = () => {
                             className="block group"
                           >
                             <div className="flex gap-3">
-                              <div className="w-20 h-20 gradient-hero rounded-lg flex-shrink-0"></div>
+                              <div className="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0">
+                              <img
+                                src={latestPost.image}
+                                alt={latestPost.title}
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
                               <div className="flex-1 min-w-0">
                                 <h4 className="font-semibold text-sm mb-1 group-hover:text-primary transition-smooth line-clamp-2">
                                   {latestPost.title}

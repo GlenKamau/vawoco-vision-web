@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Target, Users, Lightbulb, Award, Heart, Sparkles, TrendingUp, Zap, Star } from "lucide-react";
-import aboutHero from "@/assets/about-hero.jpg";
+import aboutHero from "@/assets/about-hero.png";
 import SpinningKeywords from "@/components/SpinningKeywords";
 
 const About = () => {
