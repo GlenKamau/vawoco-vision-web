@@ -49,7 +49,7 @@ const Hero = () => {
                   alt={`VAWOCO E-waste management ${index + 1}`}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-background/50 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40"></div>
               </div>
             </CarouselItem>
           ))}
@@ -82,7 +82,7 @@ const Hero = () => {
             </div>
 
             {/* Headline (with TextType animation) */}
-            <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl mb-6 animate-fade-in leading-tight text-black">
+            <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl mb-6 animate-fade-in leading-tight text-foreground drop-shadow-lg">
               <TextType
                 text={[
                   "Empowering <span style='color:#9333EA;'>Communities</span> Through Mobile Phone<span style='color:#EC4899;'> Repair </span>.",
@@ -94,7 +94,7 @@ const Hero = () => {
                 pauseDuration={2000}
                 loop={true}
                 allowHtml={true}
-                className="text-black"
+                className="text-foreground drop-shadow-lg"
               />
             </h1>
 
@@ -103,10 +103,10 @@ const Hero = () => {
               className="mb-8 animate-fade-in"
               style={{ animationDelay: "0.2s" }}
             >
-              <p className="text-xl md:text-2xl font-semibold text-foreground mb-4">
+              <p className="text-xl md:text-2xl font-semibold text-foreground drop-shadow-md mb-4">
                  VAWOCO is a mobile phone repair social enterprise that turns discarded phones into renewed value.
               </p>
-              <p className="text-lg md:text-xl text-foreground max-w-3xl"> 
+              <p className="text-lg md:text-xl text-foreground drop-shadow-md max-w-3xl"> 
                 Through collection, sorting, repairing and reselling. We reduce e-waste, supports environmental 
                 sustainability, empowers communities through mobile repair training and inclusive job creation.
               </p>
