@@ -22,7 +22,7 @@ const MissionVisionSection = () => {
         { icon: Users, label: "Empowerment" },
         { icon: Target, label: "Integrity" },
         { icon: TrendingUp, label: "Innovation" },
-        { icon: Briefcase, label: "Community" },
+        { icon: Briefcase, label: "Inclusivity" },
     ];
 
     const services: Service[] = [

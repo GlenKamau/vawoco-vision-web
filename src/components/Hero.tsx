@@ -85,7 +85,7 @@ const Hero = () => {
             <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl mb-6 animate-fade-in leading-tight text-black">
               <TextType
                 text={[
-                  "Empowering <span style='color:#9333EA;'>Communities</span> Through Mobile <span style='color:#EC4899;'> Repair </span>.",
+                  "Empowering <span style='color:#9333EA;'>Communities</span> Through Mobile Phone<span style='color:#EC4899;'> Repair </span>.",
                   // "Transforming <span style='color:#9333EA;'>E-waste</span> into <span style='color:#EC4899;'>Opportunity</span>.",
                   // "Empowering <span style='color:#9333EA;'>communities</span> through <span style='color:#EC4899;'>technology</span>.",
                 ]}
